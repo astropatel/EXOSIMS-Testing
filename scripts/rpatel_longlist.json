@@ -1,0 +1,120 @@
+{
+    "comments_missionLife": " (float) The total mission lifetime in years. When the mission time is equal or greater to this value, the mission simulation stops." , 
+    
+    "comments_missionPortion" : "(float) The portion of the mission dedicated to exoplanet science, given as a value between 0 and 1. The mission simulation stops when the total integration time plus observation overhead time is equal to the missionLife X missionPortion.",
+    
+    "comments_keepStarCatalog" : "(Boolean) representing whether to delete the star catalog after assembling the target list. If true, object reference will be available from TargetList object.", 
+    
+    "comments_minComp" : "(float)  Minimum completeness value for inclusion in target list.",
+    
+    "comments_lam" : "(float)  Detection central wavelength in nm.", 
+    
+    "comments_BW" : "(float)  Detection bandwidth fraction delta Lam/ Lam.",
+    
+    "comments_specLam" : "(float)  Spectrograph central wavelength in nm.",
+    
+    "comments_specDeltaLam" : "(float)  Spectrograph bandwidth in nm.", 
+    
+    "comments_specBW" : "(float)  Spectrograph bandwidth fraction." ,
+    
+    "comments_obscurFac" : "(float)  Obscuration factor due to secondary mirror and spiders.",
+    
+    "comments_shapeFac" : "float Telescope aperture shape factor.",
+    
+    "comments_pupilDiam" : "(float) Entrance pupil diameter in m.",
+    
+    "comments_pupilArea" : "(float) Entrance pupil area in m2.",
+    
+    "comments_IWA" : "(float) Fundamental Inner Working Angle in arcsec. No planets can ever be observed at smaller separations.",
+    
+    "comments_OWA" : "(float) Fundamental Outer Working Angle in arcsec. Set to In f for no OWA. JSON values of 0 will be as In f .",
+    
+    "comments_dMagLim" : "(float) Fundamental limiting Dmag (difference in magnitude between star and planet).",
+    
+    "comments_telescopeKeepout" : "(float) Telescope keepout angle in deg",
+    
+    "comments_attenuation" : "(float) Non-coronagraph attenuation, equal to the throughput of the optical system without the coronagraph element.",
+    
+    "comments_intCutoff" : "(float) Maximum allowed integration time in day. No integrations will be started that would take longer than this value.",
+    
+    "comments_FAP" : "(float) Detection false alarm probability",
+    
+    "comments_MDP" : "(float) Missed detection probability",
+    
+    "comments_SNimag" : "(float) Signal to Noise Ratio for imaging/detection.",
+    
+    "comments_SNchar" : "(float) Signal to Noise Ratio for characterization.",
+    
+    "comments_arange" : "(float) 1x2 list of semi-major axis range in AU.",
+    
+    "comments_erange" : "(float) 1x2 list of eccentricity range.",
+    
+    "comments_Irange" : "(float) 1x2 list of inclination range in deg.",
+    
+    "comments_Orange" : "(float) 1x2 list of ascension of the ascending node range in deg.",
+    
+    "comments_wrange" : "(float) 1x2 list of argument of perigee range in deg.",
+    
+    "comments_prange" : "(float) 1x2 list of planetary geometric albedo range.",
+    
+    "comments_Rprange" : "(float) 1x2 list of planetary radius range in Earth radii.",
+    
+    "comments_Mprange" : "(float) 1x2 list of planetary mass range in Earth masses.",
+
+    "comments_Nplanets" : "(float) Number of planets generated per MC run.",
+    
+    "comments_logfile" : "(str) 
+  
+  "Nplanets":0.5e8,
+
+  "logfile":"rpatel_log.txt",
+
+  "missionLife":2,
+
+  "scienceInstruments": [
+    {
+      "type": "imaging-EMCCD",
+      "lam": 565,
+      "BW": 0.10,
+      "QE": 0.88,
+      "CIC": 0.0013,
+      "sread": 16,
+      "ENF": 1.414,
+      "Gem": 500
+    },
+    {
+      "type": "spectro-CCD",
+      "lam": 660,
+      "BW": 0.18,
+      "QE": 0.88,
+      "CIC": 0.0013,
+      "sread": 3,
+      "Rs": 70
+    }
+  ],
+  "starlightSuppressionSystems": [
+    {
+      "type": "internal-imaging-HLC"
+    },
+    {
+      "type": "internal-spectro-SPC"
+    }
+  ],
+  "modules": {
+    "PlanetPopulation": "KnownRVPlanets",
+    "StarCatalog": "StarCatalog",
+    "OpticalSystem": "WFIRSTOpticalSystem",
+    "ZodiacalLight": "Stark",
+    "BackgroundSources": "GalaxiesFaintStars",
+    "PlanetPhysicalModel": "FortneyMarleyCahoyMix1",
+    "Observatory": "WFIRSTObservatoryL2",
+    "TimeKeeping": "TimeKeeping",
+    "PostProcessing": "PostProcessing",
+    "Completeness": "BrownCompleteness",
+    "TargetList": "KnownRVPlanetsTargetList",
+    "SimulatedUniverse": "KnownRVPlanetsUniverse",
+    "SurveySimulation": "SurveySimulation",
+    "SurveyEnsemble": "SurveyEnsemble"
+  }
+}
+
