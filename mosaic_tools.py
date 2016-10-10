@@ -12,7 +12,7 @@
 __author__ = 'Rahul I. Patel'
 
 import scipy
-from readcol import *
+
 import random as rnd
 import scipy.linalg.blas
 import types, pdb, operator
@@ -29,6 +29,10 @@ try:
 except ImportError:
     print 'Astropy not detected/installed'
 
+try:
+    from readcol import *
+except ImportError:
+    print 'Readcol not detected/installed'
 
 class PlottingTools:
     def triple_axes_dist(ylog=False, xlog=False, xlabel='x', ylabel='y'):
@@ -67,14 +71,14 @@ class PlottingTools:
                    minortick_width=1.2, majortick_size=8,
                    minortick_size=5, axes_linewidth=1.5,
                    ytick_direction='in', xtick_direction='in',
-                   yaxis_right=False):
+                   yaxis_right=False,ylog=False,xlog=False):
 
         """Changes the boring default matplotlib plotting canvas so that it
         looks nice and neat with thicker borders and larger tick marks as well
         as larger fontsizes for the axis labels. Options exist to include or
         exclude the plot grid and minortick mark labels -- set up as boolean
         variables"""
-
+        
         if gridon:
             axis.grid()
         if minortickson:
@@ -91,6 +95,12 @@ class PlottingTools:
             line.set_markeredgewidth(minortick_width)
         for line in axis.yaxis.get_minorticklines():
             line.set_markeredgewidth(minortick_width)
+
+        if xlog:
+            axis.set_xscale('log', nonposy='clip')
+        if ylog:
+            axis.set_yscale('log', nonposy='clip')
+
 
         # plt.rc('text', usetex=True)
         plt.rc('font', **{'family': 'sans-serif', 'sans-serif': ['Helvetica']})

@@ -1,5 +1,5 @@
 {
-  "missionLife": 0.2,
+  "missionLife": 2,
   "missionPortion": 0.167,
   "keepStarCatalog": true,
   "minComp": 0,
@@ -45,7 +45,7 @@
       "core_contrast": 6e-10
     }
   ],
-    
+
 "observingModes": [
     {
       "instName": "imaging-EMCCD",
@@ -75,7 +75,7 @@
       "lam": 890,
       "SNR": 10
     }
-  ],    
+  ],
     "modules": {
     "PlanetPopulation": "KnownRVPlanets",
     "StarCatalog": "StarCatalog",

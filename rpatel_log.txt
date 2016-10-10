@@ -1,1 +1,976 @@
-INFO: MissionSim.py(196): start_logging: Starting log.
+INFO: MissionSim.py(198): start_logging: Starting log.
+INFO: SurveySimulation.py(200): run_sim: run_sim beginning
+INFO: TimeKeeping.py(159): allocate_time: TK [2.0]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 2.0 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [2.00728477061]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [2.01456954122]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [2.01456954122]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([183]) of target 140
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([183]) of target 140
+INFO: TimeKeeping.py(159): allocate_time: TK [2.01456954131]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [2.0145695414]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [2.0145695414]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [4.0145695414]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 4.014569541397917 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [4.02654619867]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [4.03852285594]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [4.03852285594]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([165]) of target 124
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([165]) of target 124
+INFO: TimeKeeping.py(159): allocate_time: TK [4.03852285611]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [4.03852285627]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [4.03852285627]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [6.03852285627]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 6.038522856274629 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [6.03906215626]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [6.03960145625]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [6.03960145625]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([7]) of target 6
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([7]) of target 6
+INFO: TimeKeeping.py(159): allocate_time: TK [6.03960145625]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [6.03960145626]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [6.03960145626]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [8.03960145626]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 8.039601456258875 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [8.08560047728]: alloc: 0.05 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [8.1315994983]: alloc: 0.05 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [8.1315994983]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([455]) of target 360
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([455]) of target 360
+INFO: TimeKeeping.py(159): allocate_time: TK [8.13159949892]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [8.13159949953]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [8.13159949953]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [10.1315994995]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 10.131599499526835 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [10.1331436369]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [10.1346877744]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [10.1346877744]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([142]) of target 107
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([142]) of target 107
+INFO: TimeKeeping.py(159): allocate_time: TK [10.1346877744]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [10.1346877744]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [10.1346877744]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [12.1346877744]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 12.134687774391654 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [12.136160587]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [12.1376333995]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [12.1376333995]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([117]) of target 87
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([117]) of target 87
+INFO: TimeKeeping.py(159): allocate_time: TK [12.1376333995]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [12.1376333996]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [12.1376333996]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [14.1376333996]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 14.13763339956406 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [14.4574985468]: alloc: 0.32 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [14.7773636939]: alloc: 0.32 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [14.7773636939]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([38, 39, 40]) of target 27
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([38, 39, 40]) of target 27
+INFO: TimeKeeping.py(159): allocate_time: TK [14.7773636973]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [14.7773637007]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [14.7773637007]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [16.7773637007]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 16.777363700725374 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [16.787950001]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [16.7985363012]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [16.7985363012]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([37]) of target 26
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([37]) of target 26
+INFO: TimeKeeping.py(159): allocate_time: TK [16.7985363013]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [16.7985363014]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [16.7985363014]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [18.7985363014]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 18.798536301441793 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [18.8574295254]: alloc: 0.06 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [18.9163227493]: alloc: 0.06 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [18.9163227493]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([271]) of target 206
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([271]) of target 206
+INFO: TimeKeeping.py(159): allocate_time: TK [18.91632275]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [18.9163227508]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [18.9163227508]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [20.9163227508]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 20.916322750766383 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [20.9425670989]: alloc: 0.03 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [20.9688114469]: alloc: 0.03 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [20.9688114469]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([28]) of target 19
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([28]) of target 19
+INFO: TimeKeeping.py(159): allocate_time: TK [20.9688114473]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [20.9688114476]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [20.9688114476]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [22.9688114476]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 22.968811447572705 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [22.9697803759]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [22.9707493043]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [22.9707493043]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([477]) of target 376
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([477]) of target 376
+INFO: TimeKeeping.py(159): allocate_time: TK [22.9707493043]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [22.9707493043]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [22.9707493043]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [24.9707493043]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 24.970749304281348 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [24.9730462082]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [24.975343112]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [24.975343112]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([410]) of target 319
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([410]) of target 319
+INFO: TimeKeeping.py(159): allocate_time: TK [24.9753431121]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [24.9753431121]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [24.9753431121]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [26.9753431121]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 26.97534311208787 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [26.9864413773]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [26.9975396425]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [26.9975396425]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([402]) of target 313
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([402]) of target 313
+INFO: TimeKeeping.py(159): allocate_time: TK [26.9975396426]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [26.9975396427]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [26.9975396427]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [28.9975396427]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 28.99753964274982 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [29.0325077798]: alloc: 0.03 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [29.0674759168]: alloc: 0.03 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [29.0674759168]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([313]) of target 241
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([313]) of target 241
+INFO: TimeKeeping.py(159): allocate_time: TK [29.0674759172]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [29.0674759177]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [29.0674759177]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [31.0674759177]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 31.067475917663423 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [31.102943692]: alloc: 0.04 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [31.1384114663]: alloc: 0.04 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [31.1384114663]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([91]) of target 65
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([91]) of target 65
+INFO: TimeKeeping.py(159): allocate_time: TK [31.1384114667]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [31.1384114672]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [31.1384114672]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [33.1384114672]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 33.13841146716072 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [33.1418867589]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [33.1453620506]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [33.1453620506]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([23]) of target 14
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([23]) of target 14
+INFO: TimeKeeping.py(159): allocate_time: TK [33.1453620506]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [33.1453620506]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [33.1453620506]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [35.1453620506]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 35.1453620506384 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [35.150968806]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [35.1565755614]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [35.1565755614]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([153]) of target 114
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([153]) of target 114
+INFO: TimeKeeping.py(159): allocate_time: TK [35.1565755614]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [35.1565755615]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [35.1565755615]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [37.1565755615]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 37.156575561519375 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [37.1599081239]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [37.1632406864]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [37.1632406864]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([154]) of target 115
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([154]) of target 115
+INFO: TimeKeeping.py(159): allocate_time: TK [37.1632406864]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [37.1632406865]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [37.1632406865]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [39.1632406865]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 39.16324068646617 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [39.1745403693]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [39.1858400522]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [39.1858400522]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([179]) of target 136
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([179]) of target 136
+INFO: TimeKeeping.py(159): allocate_time: TK [39.1858400524]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [39.1858400525]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [39.1858400525]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [41.1858400525]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 41.18584005251313 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [41.1875466306]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [41.1892532088]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [41.1892532088]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([250]) of target 191
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([250]) of target 191
+INFO: TimeKeeping.py(159): allocate_time: TK [41.1892532088]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [41.1892532088]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [41.1892532088]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [43.1892532088]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 43.189253208827196 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [43.1919639466]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [43.1946746844]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [43.1946746844]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([157]) of target 118
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([157]) of target 118
+INFO: TimeKeeping.py(159): allocate_time: TK [43.1946746845]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [43.1946746845]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [43.1946746845]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [45.1946746845]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 45.194674684510034 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [45.1951616743]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [45.195648664]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [45.195648664]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([116]) of target 86
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([116]) of target 86
+INFO: TimeKeeping.py(159): allocate_time: TK [45.195648664]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [45.195648664]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [45.195648664]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [47.195648664]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 47.19564866402763 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [47.2241366596]: alloc: 0.03 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [47.2526246551]: alloc: 0.03 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [47.2526246551]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([323]) of target 251
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([323]) of target 251
+INFO: TimeKeeping.py(159): allocate_time: TK [47.2526246555]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [47.2526246559]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [47.2526246559]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [49.2526246559]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 49.252624655888255 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [49.276711953]: alloc: 0.02 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [49.30079925]: alloc: 0.02 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [49.30079925]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([292]) of target 220
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([292]) of target 220
+INFO: TimeKeeping.py(159): allocate_time: TK [49.3007992503]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [49.3007992506]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [49.3007992506]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [301.401197605]: alloc: 2.00 day	[+window]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 301.40119760479035 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [301.410618554]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [301.420039503]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [301.420039503]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([166]) of target 125
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([166]) of target 125
+INFO: TimeKeeping.py(159): allocate_time: TK [301.420039503]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [301.420039503]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [301.420039503]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [303.420039503]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 303.42003950284766 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [303.420422474]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [303.420805444]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [303.420805444]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([311]) of target 239
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([311]) of target 239
+INFO: TimeKeeping.py(159): allocate_time: TK [303.420805444]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [303.420805444]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [303.420805444]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [305.420805444]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 305.42080544420264 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [305.421752418]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [305.422699392]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [305.422699392]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([162]) of target 121
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([162]) of target 121
+INFO: TimeKeeping.py(159): allocate_time: TK [305.422699392]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [305.422699392]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [305.422699392]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [307.422699392]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 307.4226993916028 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [307.452512546]: alloc: 0.03 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [307.4823257]: alloc: 0.03 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [307.4823257]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([169]) of target 128
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([169]) of target 128
+INFO: TimeKeeping.py(159): allocate_time: TK [307.4823257]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [307.482325701]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [307.482325701]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [309.482325701]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 309.48232570078915 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [309.503570712]: alloc: 0.02 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [309.524815724]: alloc: 0.02 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [309.524815724]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([128]) of target 95
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([128]) of target 95
+INFO: TimeKeeping.py(159): allocate_time: TK [309.524815724]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [309.524815725]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [309.524815725]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [311.524815725]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 311.52481572465445 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [311.529970297]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [311.535124869]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [311.535124869]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([174, 175]) of target 133
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([174, 175]) of target 133
+INFO: TimeKeeping.py(159): allocate_time: TK [311.535124869]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [311.535124869]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [311.535124869]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [313.535124869]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 313.5351248686528 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [313.536478026]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [313.537831183]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [313.537831183]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([199]) of target 149
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([199]) of target 149
+INFO: TimeKeeping.py(159): allocate_time: TK [313.537831183]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [313.537831183]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [313.537831183]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [315.537831183]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 315.5378311829413 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [315.538550026]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [315.539268869]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [315.539268869]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([331]) of target 259
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([331]) of target 259
+INFO: TimeKeeping.py(159): allocate_time: TK [315.539268869]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [315.539268869]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [315.539268869]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [317.539268869]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 317.5392688686296 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [317.54281671]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [317.546364552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [317.546364552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([111]) of target 82
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([111]) of target 82
+INFO: TimeKeeping.py(159): allocate_time: TK [317.546364552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [317.546364552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [317.546364552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [319.546364552]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 319.5463645519226 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [319.582093295]: alloc: 0.04 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [319.617822038]: alloc: 0.04 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [319.617822038]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([384]) of target 299
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([384]) of target 299
+INFO: TimeKeeping.py(159): allocate_time: TK [319.617822038]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [319.617822039]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [319.617822039]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [321.617822039]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 321.6178220387834 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [321.618460038]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [321.619098037]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [321.619098037]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([1]) of target 1
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([1]) of target 1
+INFO: TimeKeeping.py(159): allocate_time: TK [321.619098037]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [321.619098037]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [321.619098037]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [323.619098037]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 323.6190980368094 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [323.626220675]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [323.633343313]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [323.633343313]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([98]) of target 71
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([98]) of target 71
+INFO: TimeKeeping.py(159): allocate_time: TK [323.633343313]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [323.633343313]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [323.633343313]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [325.633343313]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 325.6333433128992 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [325.634880999]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [325.636418685]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [325.636418685]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([206]) of target 156
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([206]) of target 156
+INFO: TimeKeeping.py(159): allocate_time: TK [325.636418685]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [325.636418685]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [325.636418685]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [327.636418685]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 327.63641868524655 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [327.644283179]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [327.652147674]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [327.652147674]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([163]) of target 122
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([163]) of target 122
+INFO: TimeKeeping.py(159): allocate_time: TK [327.652147674]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [327.652147674]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [327.652147674]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [329.652147674]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 329.6521476739729 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [329.660693462]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [329.66923925]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [329.66923925]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([223]) of target 170
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([223]) of target 170
+INFO: TimeKeeping.py(159): allocate_time: TK [329.669239251]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [329.669239251]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [329.669239251]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [331.669239251]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 331.66923925071285 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [331.669785505]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [331.670331759]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [331.670331759]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([497]) of target 392
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([497]) of target 392
+INFO: TimeKeeping.py(159): allocate_time: TK [331.670331759]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [331.670331759]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [331.670331759]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [333.670331759]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 333.67033175932227 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [333.680856039]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [333.691380318]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [333.691380318]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([400]) of target 311
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([400]) of target 311
+INFO: TimeKeeping.py(159): allocate_time: TK [333.691380319]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [333.691380319]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [333.691380319]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [335.691380319]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 335.6913803187565 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [335.696126333]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [335.700872347]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [335.700872347]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([221, 222]) of target 169
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([221, 222]) of target 169
+INFO: TimeKeeping.py(159): allocate_time: TK [335.700872347]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [335.700872347]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [335.700872347]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [337.700872347]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 337.70087234739253 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [337.70828966]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [337.715706972]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [337.715706972]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([428]) of target 334
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([428]) of target 334
+INFO: TimeKeeping.py(159): allocate_time: TK [337.715706972]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [337.715706972]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [337.715706972]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [339.715706972]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 339.7157069722289 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [339.717791429]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [339.719875886]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [339.719875886]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([3]) of target 3
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([3]) of target 3
+INFO: TimeKeeping.py(159): allocate_time: TK [339.719875886]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [339.719875886]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [339.719875886]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [341.719875886]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 341.7198758857678 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [341.745033662]: alloc: 0.03 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [341.770191439]: alloc: 0.03 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [341.770191439]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([404, 405]) of target 315
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([404, 405]) of target 315
+INFO: TimeKeeping.py(159): allocate_time: TK [341.77019144]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [341.77019144]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [341.77019144]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [343.77019144]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 343.770191439869 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [343.78056271]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [343.790933979]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [343.790933979]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([296]) of target 224
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([296]) of target 224
+INFO: TimeKeeping.py(159): allocate_time: TK [343.79093398]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [343.79093398]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [343.79093398]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [345.79093398]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 345.7909339797644 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [345.800981892]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [345.811029803]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [345.811029803]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([387, 388]) of target 302
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([387, 388]) of target 302
+INFO: TimeKeeping.py(159): allocate_time: TK [345.811029803]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [345.811029804]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [345.811029804]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [347.811029804]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 347.8110298035623 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [347.81504061]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [347.819051416]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [347.819051416]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([124]) of target 92
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([124]) of target 92
+INFO: TimeKeeping.py(159): allocate_time: TK [347.819051416]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [347.819051416]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [347.819051416]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [600.80239521]: alloc: 2.00 day	[+window]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 600.8023952095807 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [600.80736418]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [600.812333151]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [600.812333151]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([144, 145, 146, 147]) of target 109
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([144, 145, 146, 147]) of target 109
+INFO: TimeKeeping.py(159): allocate_time: TK [600.812333151]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [600.812333151]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [600.812333151]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [602.812333151]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 602.8123331512259 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [602.821474458]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [602.830615765]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [602.830615765]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([137]) of target 103
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([137]) of target 103
+INFO: TimeKeeping.py(159): allocate_time: TK [602.830615765]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [602.830615765]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [602.830615765]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [604.830615765]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 604.8306157653956 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [604.835988724]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [604.841361684]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [604.841361684]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([177, 178]) of target 135
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([177, 178]) of target 135
+INFO: TimeKeeping.py(159): allocate_time: TK [604.841361684]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [604.841361684]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [604.841361684]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [606.841361684]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 606.8413616836749 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [606.845972232]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [606.85058278]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [606.85058278]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([298]) of target 226
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([298]) of target 226
+INFO: TimeKeeping.py(159): allocate_time: TK [606.85058278]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [606.85058278]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [606.85058278]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [608.85058278]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 608.8505827797082 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [608.864185019]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [608.877787258]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [608.877787258]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([160, 161]) of target 120
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([160, 161]) of target 120
+INFO: TimeKeeping.py(159): allocate_time: TK [608.877787259]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [608.877787259]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [608.877787259]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [610.877787259]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 610.8777872587389 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [610.961319617]: alloc: 0.08 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [611.044851975]: alloc: 0.08 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [611.044851975]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([27]) of target 18
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([27]) of target 18
+INFO: TimeKeeping.py(159): allocate_time: TK [611.044851976]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [611.044851977]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [611.044851977]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [613.044851977]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 613.0448519766223 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [613.047214201]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [613.049576426]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [613.049576426]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([326]) of target 254
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([326]) of target 254
+INFO: TimeKeeping.py(159): allocate_time: TK [613.049576426]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [613.049576426]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [613.049576426]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [615.049576426]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 615.0495764261177 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [615.136755596]: alloc: 0.09 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [615.223934766]: alloc: 0.09 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [615.223934766]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([470]) of target 369
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([470]) of target 369
+INFO: TimeKeeping.py(159): allocate_time: TK [615.223934767]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [615.223934768]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [615.223934768]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [617.223934768]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 617.2239347681634 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [617.228179566]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [617.232424363]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [617.232424363]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([168]) of target 127
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([168]) of target 127
+INFO: TimeKeeping.py(159): allocate_time: TK [617.232424363]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [617.232424363]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [617.232424363]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [619.232424363]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 619.2324243632384 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [619.239088259]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [619.245752155]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [619.245752155]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([139, 140]) of target 105
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([139, 140]) of target 105
+INFO: TimeKeeping.py(159): allocate_time: TK [619.245752155]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [619.245752155]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [619.245752155]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [621.245752155]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 621.2457521552569 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [621.246269604]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [621.246787052]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [621.246787052]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([17, 18, 19]) of target 10
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([17, 18, 19]) of target 10
+INFO: TimeKeeping.py(159): allocate_time: TK [621.246787052]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [621.246787052]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [621.246787052]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [623.246787052]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 623.2467870522996 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [623.253684654]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [623.260582257]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [623.260582257]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([452]) of target 357
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([452]) of target 357
+INFO: TimeKeeping.py(159): allocate_time: TK [623.260582257]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [623.260582257]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [623.260582257]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [625.260582257]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 625.2605822567289 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [625.27058114]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [625.280580024]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [625.280580024]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([87]) of target 61
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([87]) of target 61
+INFO: TimeKeeping.py(159): allocate_time: TK [625.280580024]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [625.280580024]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [625.280580024]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [627.280580024]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 627.2805800240524 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [627.292130672]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [627.30368132]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [627.30368132]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([306]) of target 234
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([306]) of target 234
+INFO: TimeKeeping.py(159): allocate_time: TK [627.303681321]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [627.303681321]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [627.303681321]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [629.303681321]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 629.303681320707 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [629.322275652]: alloc: 0.02 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [629.340869984]: alloc: 0.02 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [629.340869984]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([350]) of target 271
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([350]) of target 271
+INFO: TimeKeeping.py(159): allocate_time: TK [629.340869984]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [629.340869985]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [629.340869985]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [631.340869985]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 631.3408699846307 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [631.356883757]: alloc: 0.02 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [631.372897529]: alloc: 0.02 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [631.372897529]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([133]) of target 100
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([133]) of target 100
+INFO: TimeKeeping.py(159): allocate_time: TK [631.372897529]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [631.372897529]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [631.372897529]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [633.372897529]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 633.3728975290276 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [633.374184041]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [633.375470552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [633.375470552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([240, 241]) of target 183
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([240, 241]) of target 183
+INFO: TimeKeeping.py(159): allocate_time: TK [633.375470552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [633.375470552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [633.375470552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [635.375470552]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 635.3754705524725 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [635.383304483]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [635.391138413]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [635.391138413]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([151]) of target 112
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([151]) of target 112
+INFO: TimeKeeping.py(159): allocate_time: TK [635.391138413]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [635.391138414]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [635.391138414]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [637.391138414]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 637.3911384135724 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [637.39994947]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [637.408760526]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [637.408760526]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([297]) of target 225
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([297]) of target 225
+INFO: TimeKeeping.py(159): allocate_time: TK [637.408760526]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [637.408760526]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [637.408760526]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [639.408760526]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 639.4087605263323 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [639.414285805]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [639.419811084]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [639.419811084]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([105]) of target 77
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([105]) of target 77
+INFO: TimeKeeping.py(159): allocate_time: TK [639.419811085]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [639.419811085]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [639.419811085]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [641.419811085]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 641.4198110846035 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [641.426560813]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [641.433310541]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [641.433310541]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([106]) of target 78
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([106]) of target 78
+INFO: TimeKeeping.py(159): allocate_time: TK [641.433310541]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [641.433310541]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [641.433310541]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [643.433310541]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 643.4333105409403 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [643.444232567]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [643.455154593]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [643.455154593]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([361, 362]) of target 281
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([361, 362]) of target 281
+INFO: TimeKeeping.py(159): allocate_time: TK [643.455154593]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [643.455154594]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [643.455154594]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [645.455154594]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 645.4551545935394 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [645.458847587]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [645.46254058]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [645.46254058]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([164]) of target 123
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([164]) of target 123
+INFO: TimeKeeping.py(159): allocate_time: TK [645.46254058]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [645.46254058]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [645.46254058]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [647.46254058]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 647.4625405804902 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [647.470595876]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [647.478651171]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [647.478651171]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([85]) of target 59
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([85]) of target 59
+INFO: TimeKeeping.py(159): allocate_time: TK [647.478651171]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [647.478651171]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [647.478651171]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [900.203592814]: alloc: 2.00 day	[+window]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(430): next_target: Mission complete: no more time available
+INFO: SurveySimulation.py(300): run_sim: Simulation finishing OK. Results stored in SurveySimulation.DRM
+g.py(159): allocate_time: TK [347.819051416]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [600.80239521]: alloc: 2.00 day	[+window]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 600.8023952095807 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [600.80736418]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [600.812333151]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [600.812333151]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([144, 145, 146, 147]) of target 109
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([144, 145, 146, 147]) of target 109
+INFO: TimeKeeping.py(159): allocate_time: TK [600.812333151]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [600.812333151]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [600.812333151]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [602.812333151]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 602.8123331512259 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [602.821474458]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [602.830615765]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [602.830615765]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([137]) of target 103
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([137]) of target 103
+INFO: TimeKeeping.py(159): allocate_time: TK [602.830615765]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [602.830615765]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [602.830615765]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [604.830615765]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 604.8306157653956 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [604.835988724]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [604.841361684]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [604.841361684]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([177, 178]) of target 135
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([177, 178]) of target 135
+INFO: TimeKeeping.py(159): allocate_time: TK [604.841361684]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [604.841361684]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [604.841361684]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [606.841361684]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 606.8413616836749 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [606.845972232]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [606.85058278]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [606.85058278]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([298]) of target 226
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([298]) of target 226
+INFO: TimeKeeping.py(159): allocate_time: TK [606.85058278]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [606.85058278]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [606.85058278]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [608.85058278]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 608.8505827797082 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [608.864185019]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [608.877787258]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [608.877787258]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([160, 161]) of target 120
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([160, 161]) of target 120
+INFO: TimeKeeping.py(159): allocate_time: TK [608.877787259]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [608.877787259]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [608.877787259]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [610.877787259]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 610.8777872587389 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [610.961319617]: alloc: 0.08 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [611.044851975]: alloc: 0.08 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [611.044851975]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([27]) of target 18
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([27]) of target 18
+INFO: TimeKeeping.py(159): allocate_time: TK [611.044851976]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [611.044851977]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [611.044851977]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [613.044851977]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 613.0448519766223 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [613.047214201]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [613.049576426]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [613.049576426]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([326]) of target 254
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([326]) of target 254
+INFO: TimeKeeping.py(159): allocate_time: TK [613.049576426]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [613.049576426]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [613.049576426]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [615.049576426]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 615.0495764261177 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [615.136755596]: alloc: 0.09 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [615.223934766]: alloc: 0.09 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [615.223934766]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([470]) of target 369
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([470]) of target 369
+INFO: TimeKeeping.py(159): allocate_time: TK [615.223934767]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [615.223934768]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [615.223934768]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [617.223934768]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 617.2239347681634 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [617.228179566]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [617.232424363]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [617.232424363]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([168]) of target 127
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([168]) of target 127
+INFO: TimeKeeping.py(159): allocate_time: TK [617.232424363]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [617.232424363]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [617.232424363]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [619.232424363]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 619.2324243632384 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [619.239088259]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [619.245752155]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [619.245752155]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([139, 140]) of target 105
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([139, 140]) of target 105
+INFO: TimeKeeping.py(159): allocate_time: TK [619.245752155]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [619.245752155]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [619.245752155]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [621.245752155]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 621.2457521552569 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [621.246269604]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [621.246787052]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [621.246787052]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([17, 18, 19]) of target 10
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([17, 18, 19]) of target 10
+INFO: TimeKeeping.py(159): allocate_time: TK [621.246787052]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [621.246787052]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [621.246787052]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [623.246787052]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 623.2467870522996 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [623.253684654]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [623.260582257]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [623.260582257]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([452]) of target 357
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([452]) of target 357
+INFO: TimeKeeping.py(159): allocate_time: TK [623.260582257]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [623.260582257]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [623.260582257]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [625.260582257]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 625.2605822567289 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [625.27058114]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [625.280580024]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [625.280580024]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([87]) of target 61
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([87]) of target 61
+INFO: TimeKeeping.py(159): allocate_time: TK [625.280580024]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [625.280580024]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [625.280580024]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [627.280580024]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 627.2805800240524 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [627.292130672]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [627.30368132]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [627.30368132]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([306]) of target 234
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([306]) of target 234
+INFO: TimeKeeping.py(159): allocate_time: TK [627.303681321]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [627.303681321]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [627.303681321]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [629.303681321]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 629.303681320707 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [629.322275652]: alloc: 0.02 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [629.340869984]: alloc: 0.02 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [629.340869984]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([350]) of target 271
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([350]) of target 271
+INFO: TimeKeeping.py(159): allocate_time: TK [629.340869984]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [629.340869985]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [629.340869985]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [631.340869985]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 631.3408699846307 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [631.356883757]: alloc: 0.02 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [631.372897529]: alloc: 0.02 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [631.372897529]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([133]) of target 100
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([133]) of target 100
+INFO: TimeKeeping.py(159): allocate_time: TK [631.372897529]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [631.372897529]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [631.372897529]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [633.372897529]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 633.3728975290276 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [633.374184041]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [633.375470552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [633.375470552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([240, 241]) of target 183
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([240, 241]) of target 183
+INFO: TimeKeeping.py(159): allocate_time: TK [633.375470552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [633.375470552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [633.375470552]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [635.375470552]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 635.3754705524725 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [635.383304483]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [635.391138413]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [635.391138413]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([151]) of target 112
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([151]) of target 112
+INFO: TimeKeeping.py(159): allocate_time: TK [635.391138413]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [635.391138414]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [635.391138414]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [637.391138414]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 637.3911384135724 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [637.39994947]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [637.408760526]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [637.408760526]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([297]) of target 225
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([297]) of target 225
+INFO: TimeKeeping.py(159): allocate_time: TK [637.408760526]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [637.408760526]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [637.408760526]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [639.408760526]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 639.4087605263323 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [639.414285805]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [639.419811084]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [639.419811084]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([105]) of target 77
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([105]) of target 77
+INFO: TimeKeeping.py(159): allocate_time: TK [639.419811085]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [639.419811085]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [639.419811085]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [641.419811085]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 641.4198110846035 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [641.426560813]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [641.433310541]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [641.433310541]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([106]) of target 78
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([106]) of target 78
+INFO: TimeKeeping.py(159): allocate_time: TK [641.433310541]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [641.433310541]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [641.433310541]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [643.433310541]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 643.4333105409403 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [643.444232567]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [643.455154593]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [643.455154593]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([361, 362]) of target 281
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([361, 362]) of target 281
+INFO: TimeKeeping.py(159): allocate_time: TK [643.455154593]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [643.455154594]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [643.455154594]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [645.455154594]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 645.4551545935394 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [645.458847587]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [645.46254058]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [645.46254058]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([164]) of target 123
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([164]) of target 123
+INFO: TimeKeeping.py(159): allocate_time: TK [645.46254058]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [645.46254058]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [645.46254058]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [647.46254058]: alloc: 2.00 day	[ok]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(243): run_sim: current time is <Quantity 647.4625405804902 d>
+INFO: TimeKeeping.py(159): allocate_time: TK [647.470595876]: alloc: 0.01 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [647.478651171]: alloc: 0.01 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [647.478651171]: alloc: 0.00 day	[ok]	[SurveySimulation.py:510(observation_detection)]
+INFO: SurveySimulation.py(531): observation_detection: Detected planet(s) array([85]) of target 59
+INFO: SurveySimulation.py(664): observation_characterization: Characterized planet(s) array([85]) of target 59
+INFO: TimeKeeping.py(159): allocate_time: TK [647.478651171]: alloc: 0.00 day	[ok]	[SurveySimulation.py:755(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [647.478651171]: alloc: 0.00 day	[ok]	[SurveySimulation.py:768(calc_signal_noise)]
+INFO: TimeKeeping.py(159): allocate_time: TK [647.478651171]: alloc: 0.00 day	[ok]	[SurveySimulation.py:683(observation_characterization)]
+INFO: TimeKeeping.py(159): allocate_time: TK [900.203592814]: alloc: 2.00 day	[+window]	[SurveySimulation.py:339(next_target)]
+INFO: SurveySimulation.py(430): next_target: Mission complete: no more time available
+INFO: SurveySimulation.py(300): run_sim: Simulation finishing OK. Results stored in SurveySimulation.DRM
+n finishing OK. Results stored in SurveySimulation.DRM
+n finishing OK. Results stored in SurveySimulation.DRM
+n finishing OK. Results stored in SurveySimulation.DRM
+n finishing OK. Results stored in SurveySimulation.DRM
+n finishing OK. Results stored in SurveySimulation.DRM
+n finishing OK. Results stored in SurveySimulation.DRM
+n finishing OK. Results stored in SurveySimulation.DRM
