@@ -1,0 +1,58 @@
+nextTimeAvail,0.0
+currentTimeNorm,0.0
+scaleOrbits,False
+minComp,0.0
+dMagLim,21.0
+fEZ0,1.584893192461111e-09
+fZ0,6.309573444801917e-10
+missionPortion,0.167
+attenuation,0.441
+extendedLife,0.0
+Orange,[   0.  360.]
+seed,601394520
+dryMass,3400.0
+intCutoff,50.0
+missionStart,60634.0
+settlingTime,1.0
+duration,50.0
+pupilArea,3.761776790396704
+Revision,Not a valid SVN or Github revision.
+prange,[ 0.083  0.882]
+IWA,0.0
+keepStarCatalog,True
+slewIsp,4160.0
+FAP,3e-07
+OWA,inf
+defburnPortion,0.05
+magEZ,22.0
+scMass,6000.0
+Irange,[   0.  180.]
+dtAlloc,1.0
+currentTimeAbs,60634.0
+skIsp,220.0
+wrange,[   0.  360.]
+varEZ,0.0
+nStars,402
+missionFinishNorm,730.5
+magZ,23.0
+pupilDiam,2.37
+havejplephem,True
+shapeFac,0.7853981633974483
+telescopeKeepout,45.0
+flowRate,0.95304246059091
+rrange,[  1.00000000e-03   1.99000000e+02]
+thrust,450.0
+obscurFac,0.14728
+MDP,0.001
+missionLife,2.0
+coMass,5800.0
+Mprange,[  1.00000000e+00   4.13100000e+03]
+Rprange,[ 0.001   0.0226]
+constrainOrbits,False
+erange,[ 0.01  0.99]
+missionFinishAbs,61364.5
+arange,[   0.1  100. ]
+occulterSep,55000.0
+eta,0.1
+haveOcculter,False
+Ndark,10.0

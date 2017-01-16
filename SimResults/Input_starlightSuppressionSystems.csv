@@ -1,0 +1,36 @@
+starlightSuppressionSystems,1
+lam,565.0
+name,HLC-565
+IWA,0.0
+deltaLam,56.5
+PSF,"[[ 1.  1.  1.]
+ [ 1.  1.  1.]
+ [ 1.  1.  1.]]"
+core_contrast,1e-09
+OWA,inf
+BW,0.1
+ohTime,1.0
+occ_trans,0.2
+core_mean_intensity,2e-12
+samp,10.0
+core_area,6e-10
+core_thruput,0.02
+occulter,False
+starlightSuppressionSystems,2
+lam,660.0
+name,SPC-660
+IWA,0.0
+deltaLam,118.8
+PSF,"[[ 1.  1.  1.]
+ [ 1.  1.  1.]
+ [ 1.  1.  1.]]"
+core_contrast,6e-10
+OWA,inf
+BW,0.18
+ohTime,1.0
+occ_trans,0.2
+core_mean_intensity,
+samp,10.0
+core_area,
+core_thruput,0.02
+occulter,False
