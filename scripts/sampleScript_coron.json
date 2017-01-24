@@ -1,23 +1,24 @@
 {
-  "missionLife": 0.1,
+  "missionLife": 1,
   "missionPortion": 0.167,
   "keepStarCatalog": true,
   "minComp": 0,
-  "dMagLim": 21,
+  "dMagLim": 25,
   "pupilDiam": 2.37,
   "obscurFac": 0.14728,
   "attenuation": 0.441,
   "ppFact": 0.1,
+  "FAP": 0.1,
   "scienceInstruments": [
     {
-      "Name": "imaging-EMCCD",
+      "name": "imaging-EMCCD",
       "QE": 0.88,
       "CIC": 0.0013,
       "sread": 0,
       "ENF": 1.414
     },
     {
-      "Name": "spectro-CCD",
+      "name": "spectro-CCD",
       "QE": 0.88,
       "CIC": 0.0013,
       "sread": 3,
@@ -26,18 +27,23 @@
   ],
   "starlightSuppressionSystems": [
     {
-      "Name": "HLC-565",
+      "name": "HLC-565",
       "lam": 565,
       "BW": 0.10,
+      "IWA": 0.0415,
+      "OWA": 1.375,
       "occ_trans": 0.2,
       "core_thruput": 0.02,
       "core_mean_intensity": 2e-12,
-      "core_area": 6e-10
+      "core_area": 0.005
     },
     {
-      "Name": "SPC-660",
+      "name": "SPC-660",
+      "occulter": false,
       "lam": 660,
       "BW": 0.18,
+      "IWA": 0.05,
+      "OWA": 1.5,
       "occ_trans": 0.2,
       "core_thruput": 0.02,
       "core_contrast": 6e-10
@@ -47,7 +53,7 @@
     {
       "instName": "imaging-EMCCD",
       "systName": "HLC-565",
-      "detection": true
+      "detectionMode": true
     },
     {
       "instName": "imaging-EMCCD",
@@ -79,7 +85,7 @@
     "OpticalSystem": "Nemati",
     "ZodiacalLight": "Stark",
     "BackgroundSources": "GalaxiesFaintStars",
-    "PlanetPhysicalModel": "FortneyMarleyCahoyMix1",
+    "PlanetPhysicalModel": " ",
     "Observatory": "WFIRSTObservatoryL2",
     "TimeKeeping": " ",
     "PostProcessing": " ",

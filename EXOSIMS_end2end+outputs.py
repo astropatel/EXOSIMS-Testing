@@ -1,22 +1,24 @@
 #! /usr/local/anaconda2/bin/python
 ##JX #! /usr/bin/env python 
 
-
-import EXOSIMS.MissionSim as msim
-import numpy as np
-import pickle, json, os, sys, csv
-import matplotlib.pyplot as plt
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-import mosaic_tools as mt
-import matplotlib  # JX
-
-matplotlib.use('Agg')  # JX
+import sys
 sys.path.insert(0, '/home/jxie/EXOSIMS')
 print(sys.path)
 print 'in Python: sys.argv= ', sys.argv
 
-PT = mt.PlottingTools()
+import EXOSIMS.MissionSim as msim
+import numpy as np
+import pickle, json, os, csv
+import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1 import make_axes_locatable
+import mosaic_tools as mt
 
+import matplotlib  # JX
+matplotlib.use('Agg')  # JX
+
+# ===================================================================================================
+#                            DEFINITIONS
+# ===================================================================================================
 
 def triple_axes_dist(ylog=False, xlog=False, topax=True, rightax=True,
                      figsize=(10, 10), xlabel='x', ylabel='y'):
@@ -218,6 +220,28 @@ def histPlot(xdat, bins=15, ax0=None, labels=('x', 'y'), xlog=False, ylog=False,
 
 
 def reformat_DRM(drm):
+
+    # list of keys to not do anything with
+    dontdoanything = ['char_mode', 'slew_time', 'slew_angle',
+                      'slew_dv', 'slew_mass_used']
+
+    # list of keys with which I am not sure how to handle.
+    not_sure = ['FA_status', 'FA_SNR', 'FA_fEZ', 'FA_dMag',
+                'FA_WA', 'det_DV', 'det_mass_used','det_dF_lateral',
+                'det_dF_axial', 'char_dV', 'char_mass_used',
+                'char_dF_lateral', 'char_dF_axial', 'sc_mass']
+
+    # list of keys whose array elements need to be repeated based on number of planets
+    # detected per star.
+    fill_keys = ['star_ind', 'arrival_time', 'det_time', 'char_time']
+
+    # concatenate the arrays of these keys. In the end, each element in these arrays will have their
+    # own individually mapped index in arrays in fill_keys.
+    flatten_keys = ['plan_inds', 'det_status', 'det_SNR',
+                   'det_fEZ', 'det_dMag', 'det_WA', 'char_status',
+                   'char_SNR', 'char_fEZ', 'char_dMag', 'char_WA']
+
+
     # COLLECT ALL KEYS IN DRM AND UNIQUE-IFY THE ARRAY
     kys = np.array([dt.keys() for dt in drm])
     kys = np.unique(kys.flatten())
@@ -225,12 +249,11 @@ def reformat_DRM(drm):
     # CREATE DICTIONARY OF DRM BASED ON KEYWORDS
     ddrm = {}
     for ky in kys:
-        print ky
         ddrm[ky] = np.array([dt[ky] for dt in drm])
 
     plan_raw_inds = ddrm['plan_inds']
 
-    # FILL OUT PROPER ARRAYS
+    # FILL OUT (expand) PROPER ARRAYS
     for ky in fill_keys:
         try:
             vals = ddrm[ky]
@@ -239,7 +262,8 @@ def reformat_DRM(drm):
         except KeyError:
             print '%s not found.' % ky
 
-    for ky in expand_keys:
+    # CONCATENATE INTO 1 DIMENSION
+    for ky in flatten_keys:
         try:
             ddrm[ky] = np.concatenate(ddrm[ky])
         except KeyError:
@@ -248,10 +272,57 @@ def reformat_DRM(drm):
     return ddrm
 
 
+def varcsvOut(data):
+
+
+    with open('Input_leftover_params.csv', 'wb') as myfile:
+        w = csv.writer(myfile, delimiter=',')
+
+        for key, val in data.items():
+
+            if type(val) == list:
+                i = 1
+                # JX with open('./SimResults/Input_{}.csv'.format(key), 'wb') as myfile_list:
+                with open('Input_{}.csv'.format(key), 'wb') as myfile_list:
+                    wl = csv.writer(myfile_list)
+                    for aitems in data[key]:
+                        wl.writerow(['{}'.format(key), '{}'.format(i)])
+                        for keyl, vall in aitems.items():
+                            wl.writerow([keyl, vall])
+                            myfile_list.flush()
+                        i += 1
+
+            elif type(val) == dict:
+                with open('Input_{}.csv'.format(key), 'wb') as myfile_dict:
+                    wd = csv.writer(myfile_dict)
+                    for keyd, vald in data[key].items():
+                        wd.writerow([keyd, vald])
+                        myfile_dict.flush()
+
+            else:
+                w.writerow([key, val])
+                myfile.flush()
+
+def get_specs(jfile):
+    script = open(jfile).read()
+    specs = json.loads(script)
+    return specs
+
+
+def format_args(args):
+    # KEEP ALL BUT FIRST ELEMENT OF ARGV.
+    invar = np.array(args[1:])
+    # REMOVES ALL DASHES
+    invar2 = np.array([term.strip('-') for term in invar])
+    invar3 = dict(np.resize(invar2, (invar2.size/2,2)))
+    return invar3
+
 # ==============================================================================
 #      SKY PLOT OF ALL AND OBSERVED TARGETS
 # ==============================================================================
-def skyplot(ra, dec, figsize=(20, 20), projection='mollweide', axisbg='white', ticklcolor=None):
+def skyplot(ra, dec, figsize=(20, 20), projection='mollweide', axisbg='white',
+            ticklcolor=None):
+
     fig = plt.figure(figsize=figsize)
     ax = fig.add_subplot(111, projection=projection, axisbg=axisbg)
 
@@ -270,33 +341,81 @@ def skyplot(ra, dec, figsize=(20, 20), projection='mollweide', axisbg='white', t
 
     return ax
 
+# ================================================================================
+
+PT = mt.PlottingTools()
 
 
-# RP: REMOVED IMPORT STATEMENTS LATER DOWN THE IN THE CODE. DON'T NEED REDUNDANT IMPORTS
+# ==============================================================================
+#                     FOLDERS
+# ==============================================================================
+baseFolder = '/var/www/wfirst-dev/html/sims/tools/EXOSIMS-Testing/'
+# JX resultFolder = os.path.join(baseFolder,'SimResults')
+# JX resultFolder = os.path.join(baseFolder,'../results/')
+resultFolder = os.path.join(baseFolder, '../')
+scriptFolder = os.path.join(baseFolder, 'scripts')
+compFolder = os.path.join(baseFolder, 'Completeness')
+# ==============================================================================
 
-# LOAD JSON SCRIPT FILE
-# jfile = 'template_WFIRST_KeplerLike.json'
-# jfile = 'template_WFIRST_EarthTwinHabZone.json'
-# jfile = 'template_WFIRST_KnownRV.json'
-# jfile = 'template_rpateltest_KnownRV.json'
-jfile = 'template_rpateltest_KnownRV_2years.json'
-scriptfile = os.path.join('/var/www/wfirst-dev/html/sims/tools/EXOSIMS-Testing/scripts', jfile)
-print scriptfile
+# ==============================================================================
+#                 INPUT VARIABLE DICTIONARY
+# ==============================================================================
+inputVars = format_args(sys.argv)
 
-script = open(scriptfile).read()
-specs_from_file = json.loads(script)
+# ==============================================================================
+#                   JSON INPUTS
+# ==============================================================================
 
-# QUESTION -- DO I HAVE TO RUN THIS EACH TIME OR IS THERE A WAY TO SAVE/LOAD THE OUTPUT?
-# JX %time sim = msim.MissionSim(scriptfile)
-sim = msim.MissionSim(scriptfile)  # JX
-# JX %time sim.SurveySimulation.run_sim()
+
+jfileBase = os.path.join(scriptFolder,'baseParams.json')
+jfileObsMode = os.path.join(scriptFolder,'baseObservingModes.json')
+jfileModules = os.path.join(scriptFolder,'baseModules.json')
+
+modSpecs = get_specs(jfileModules)
+obsSpecs = get_specs(jfileObsMode)
+baseSpecs = get_specs(jfileBase)
+useSpecs = baseSpecs.copy()
+
+
+# THIS PIECE UPDATES THE INPUT VARIABLE FILE WITH INPUTS FROM THE USER INTERFACE
+osmodekeys = ['lam','BW','SNR']
+
+
+# REPLACE UNIVERAL PARAMS WITH INPUT VARS
+for ikey, ivar in inputVars.iteritems():
+    if ikey in useSpecs:
+        try:
+            useSpecs[ikey] = float(ivar)
+        except ValueError: print '%s=%s cant be converted to string'%(ikey,ivar)
+# REPLACE INPUT OF BAND INFO AND CREATE OBSERVING MODE ARRAY
+for okey in osmodekeys:
+    obsSpecs['HLC_Detection'][okey] = inputVars['D' + okey]
+    obsSpecs['SPC_Characterization'][okey] = inputVars['C' + okey]
+
+# CREATES LIST OF 2 OBSERVING MODES
+useSpecs['observingModes'] = [obsSpecs['HLC_Detection'],
+                              obsSpecs['SPC_Characterization']
+                              ]
+
+useSpecs['modules'] = modSpecs[inputVars['TargetType']]
+# ==============================================================================
+
+sim = msim.MissionSim(**useSpecs)  # RP
 res = sim.SurveySimulation.run_sim()  # JX
 
 # Stored detection information -- if any -- in DRM Dictionary
 DRM = sim.SurveySimulation.DRM
 
+# REFORMATTED DDRM
+DDRM = reformat_DRM(DRM)
+
 # Simulation specifications ; i.e., all parameters used in simulation
 AllSpecs = sim.genOutSpec()
+# =========================================================================================
+#             OUTPUT CSV FILES
+# =========================================================================================
+varcsvOut(AllSpecs)
+# =========================================================================================
 
 TL = sim.TargetList
 SC = sim.StarCatalog
@@ -351,207 +470,33 @@ try:
     Irange = TL.Irange
     Rrange, Mprange = TL.Rrange, TL.Mprange
     rrange = TL.rrange
-    synplanet_prop = {'arange': arange, 'erange': erange, 'wrange': wrange, 'Orange': Orange,
-                      'prange': prange, 'Irange': Irange, 'Rrange': Rrange, 'Mprange': Mprange,
-                      'rrange': rrange}
+
 except AttributeError:
     print 'Sorry.. no go.'
     print 'Not simulated planets.'
-    synplanet_prop = None
 
 try:
     nPlans, plan2star = SU.nPlans, SU.plan2star
     sInds = SU.sInds
     # ORBTIAL PARAMETERS
-    sma, e, w, O, I = SU.a, SU.e, SU.w, SU.O, SU.I
+    sma, ecc, wangle, Oangle, Iangle = SU.a, SU.e, SU.w, SU.O, SU.I
     # PLANET PROPERTIES
     Mp, Rp = SU.Mp, SU.Rp
     # POSITION AND VELOCITY VECTOR OF PLANET
     r, v = SU.r, SU.v
     # ALBEDO
-    p = SU.p
+    palbedo = SU.p
     fEZ = SU.fEZ
 
-    empplanet_prop = {'nplans': nPlans, 'plan2star': plan2star, 'sInds': sInds, 'sma': sma,
-                      'e': e, 'w': w, 'O': O, 'I': I, 'Mp': Mp, 'Rp': Rp, 'r': r, 'v': v, 'p': p, 'fEZ': fEZ}
+
 except AttributeError:
     print 'Sorry.. no go.'
     print 'Not ``real`` planets.'
-    empplanet_prop = None
-
-mlife = AllSpecs['missionLife']
-# nsimplanets = specs_from_file['Nplanets']
-jfilebase = jfile.strip('.json').strip('template_')
-
-# simresults = 'simresults_%iyrs_%.0Estars_%s.pickle' %(mlife,nsimplanets,jfilebase)
-simresults = 'simresults_%.2fyrs_%s.pickle' % (mlife, jfilebase)
-simfile = simresults  # JX os.path.join('../results/',simresults)
-
-data = {'DRM': DRM, 'empplanet_prop': empplanet_prop, 'synplanet_prop': synplanet_prop,
-        'star_prop': star_prop, 'AllSpecs': AllSpecs}  # ,'etc_data':etc_data}
-
-handler = open(simfile, 'wb')
-pickle.dump(data, handler)
-handler.close()
-
-simresults
 
 
 # JX ------ end of Joan_EXOSIMS_end2end.py --- begin of Joan_EXOSIMS_outputs.py ------
 
-
-
-"""
-E.g.
-
-kw = {'markersize':10,'color':'magenta','marker':'D','alpha':.4}
-sp = scatterPlot(Mp/Mj,Rp/Rj,labels=('x','y'),xlog=True,**kw)
-sp.saveplot('filename.jpg') --> sp is now an plot-axis object.
-
-kw = {'markersize':10,'color':'red','marker':'o','linewidth':2,'ls':'--','alpha':.4}
-lp = linePlot(Mp/Mj,Rp/Rj,labels=('hi','no'),**kw)
-
-kw = {'markersize':10,'color':'red','linewidth':2,'ls':'--','alpha':.4}
-lp2 = linePlot(Mp/Mj,Rp/Rj,labels=('hi','no'),**kw)
-
-kw = {'histtype':'step','normed':True}
-bins = np.linspace(np.array(Mp/Mj).min(),np.array(Mp/Mj).max(),20)
-hp = histPlot(Mp/Mj,bins=bins,labels=('mass','count'),**kw)
-
-"""
-# list of keys to not do anything with
-dontdoanything = ['char_mode', 'slew_time', 'slew_angle', 'slew_dv', 'slew_mass_used']
-
-# list of keys with which I am not sure how to handle.
-not_sure = ['FA_status', 'FA_SNR', 'FA_fEZ', 'FA_dMag', 'FA_WA', 'det_DV', 'det_mass_used',
-            'det_dF_lateral', 'det_dF_axial', 'char_dV', 'char_mass_used',
-            'char_dF_lateral', 'char_dF_axial', 'sc_mass']
-
-# list of keys whose array elements need to be repeated based on number of planets 
-# detected per star.
-fill_keys = ['star_ind', 'arrival_time', 'det_time', 'char_time']
-
-# concatenate the arrays of these keys. In the end, each element in these arrays will have their
-# own individually mapped index in arrays in fill_keys.
-expand_keys = ['plan_inds', 'det_status', 'det_SNR', 'det_fEZ', 'det_dMag', 'det_WA', 'char_status',
-               'char_SNR', 'char_fEZ', 'char_dMag', 'char_WA']
-
-# Load Completeness and Simulation Results
-
-baseFolder = '/var/www/wfirst-dev/html/sims/tools/EXOSIMS-Testing/'
-# JX resultFolder = os.path.join(baseFolder,'SimResults')
-# JX resultFolder = os.path.join(baseFolder,'../results/')
-resultFolder = os.path.join(baseFolder, '../')
-scriptFolder = os.path.join(baseFolder, 'scripts')
-compFolder = os.path.join(baseFolder, 'Completeness')
-# ===============  LOAD JSON SCRIPT FILE =================
-
-# jfile = 'template_WFIRST_KeplerLike.json'
-# jfile = 'template_WFIRST_EarthTwinHabZone.json'
-# jfile = 'template_WFIRST_KnownRV.json'
-# jfile = 'template_rpateltest_KnownRV.json'
-jfile = 'template_rpateltest_KnownRV_2years.json'
-scriptfile = os.path.join(scriptFolder, jfile)
-script = open(scriptfile).read()
-specs_from_file = json.loads(script)
-
-# ===============  LOAD COMPLETENESS FILE ===============
-
-# cfile = 'EarthTwinHabZone2.comp'
-# cfile = 'KeplerLike1.comp'
-cfile = 'KnownRVPlanets_2yrs_5E+07stars_rpateltest.comp'
-fle = os.path.join(compFolder, cfile)
-dataCOMP = pickle.load(open(fle, 'rb'))
-
-# ===============  LOAD SIMULATION RESULTS ===============
-
-# simresults = 'simresults_2yrs_5E+07stars_rpateltest_KnownRV.pickle'
-# simresults = 'simresults_0.20yrs_rpateltest_KnownRV.pickle'
-simresults = 'simresults_2.00yrs_rpateltest_KnownRV_2year.pickle'
-basesim = simresults.strip('simresults_').strip('.pickle')
-
-simfile = simresults  # JX os.path.join(resultFolder,simresults)
-simr = pickle.load(open(simfile, 'rb'))
-
-print 'Upper level keys: \n\t', simr.keys()
-
-# JX plt.figure(figsize=(10,10))
-# JX plt.imshow(dataCOMP[0:600,0:160] + 1,cmap='viridis',norm=LogNorm())
-# JX plt.colorbar()
-# plt.clim(1.7,2)
-
-# Stellar Data
-
-sp = simr['star_prop']
-print 'Star property keys: \n\t', sp.keys()
-
-# Empirical Planet Data
-
-pd_s = simr['synplanet_prop']
-if pd_s is not None:
-    print 'Simulated Planet property keys: \n\t', pd_s.keys()
-else:
-    print 'No simulated planets from this simulation'
-
-pd_e = simr['empplanet_prop']
-if pd_e is not None:
-    print 'Empirical Planet property keys: \n\t', pd_e.keys()
-else:
-    print 'No empirical planets from this simulation'
-
-# DRM and Specs of simulation
-
-DRM = simr['DRM']
-AllSpecs = simr['AllSpecs']
-# REFORMATTED DDRM
-DDRM = reformat_DRM(DRM)
-
-# AllSpecs
-
-# JX 10-31-2016
-# RP -- REMOVING THIS PART.
-# import pprint
-# pp = pprint.PrettyPrinter(indent=2)
-# pp.pprint(AllSpecs)
-
-# ADDING NEW OUTPUT LINES
-# =========================================================================================
-#             OUTPUT CSV FILES 
-# =========================================================================================
-# JX with open('./SimResults/Input_leftover_params.csv', 'wb') as myfile:
-with open('Input_leftover_params.csv', 'wb') as myfile:
-    w = csv.writer(myfile, delimiter=',')
-
-    for key, val in AllSpecs.items():
-
-        if type(val) == list:
-            i = 1
-            # JX with open('./SimResults/Input_{}.csv'.format(key), 'wb') as myfile_list:
-            with open('Input_{}.csv'.format(key), 'wb') as myfile_list:
-                wl = csv.writer(myfile_list)
-                for aitems in AllSpecs[key]:
-                    wl.writerow(['{}'.format(key), '{}'.format(i)])
-                    for keyl, vall in aitems.items():
-                        wl.writerow([keyl, vall])
-                        myfile_list.flush()
-                    i += 1
-
-        elif type(val) == dict:
-            # JX with open('./SimResults/Input_{}.csv'.format(key),'wb') as myfile_dict:
-            with open('Input_{}.csv'.format(key), 'wb') as myfile_dict:
-                wd = csv.writer(myfile_dict)
-                for keyd, vald in AllSpecs[key].items():
-                    wd.writerow([keyd, vald])
-                    myfile_dict.flush()
-
-        else:
-            w.writerow([key, val])
-            myfile.flush()
-# =========================================================================================
-# =========================================================================================
-
 # RP: COMMENTED THE NEXT LINE. 
-# DRM[0]
 
 Mprange = AllSpecs['Mprange']
 arange = AllSpecs['arange']
@@ -576,11 +521,14 @@ det_wa = DDRM['det_WA']
 det_status = DDRM['det_status']
 
 # detection of planets
-
-target_observed = sp['Name'][target_obsind]
+target_observed = Name[target_obsind]
 detstatus_array = np.array([dt['det_status'] for dt in DRM])
 
-# ************************* target plot ***************************
+# ===================================================================================================
+#                 PLOTS
+# ===================================================================================================
+
+
 # SKY DISTRIBUTION OF TARGETS
 save_plots = True  # JX False
 plot_num = 1 # RP : PLOT NUMBER
@@ -588,17 +536,12 @@ plot_num = 1 # RP : PLOT NUMBER
 # JX dirsave = os.path.join(baseFolder, '../results/')
 dirsave = ''
 
-coords = sp['coords']
 ra = coords.ra.deg
 ra[ra > 180] -= 360
 ra = -1 * ra
 ra_rad, dec_rad = np.radians(ra), coords.dec.radian
 tick_labels = np.array([150, 120, 90, 60, 30, 0, 330, 300, 270, 240, 210])
 tick_labels = np.remainder(tick_labels + 360, 360)
-
-BV, MV = sp['BV'], sp['MV']
-dist = sp['dist']
-
 
 
 axt = skyplot(ra_rad, dec_rad, axisbg='#E8E8E8')
@@ -640,6 +583,7 @@ axt2.set_title('%s' % txt, fontsize=30, y=1.03)
 if save_plots:
     plot_num += 1
     plt.savefig(os.path.join(dirsave, 'fig%i.png' % plot_num), bbox_inches='tight')
+    plt.savefig(os.path.join(dirsave, 'fig%i.pdf' % plot_num), bbox_inches='tight')
 
 # ================================================================================
 #        OBSERVATION ORDER LINES
@@ -676,6 +620,7 @@ for i, j in enumerate(target_obsind):
 if save_plots:
     plot_num += 1
     plt.savefig(os.path.join(dirsave, 'fig%i.png' % plot_num), bbox_inches='tight')
+    plt.savefig(os.path.join(dirsave, 'fig%i.pdf' % plot_num), bbox_inches='tight')
 
 # ==================================================================================================================
 #         CMD
@@ -692,13 +637,14 @@ axbv.set_title('%s' % txt, fontsize=30, y=1.03)
 if save_plots:
     plot_num += 1
     plt.savefig(os.path.join(dirsave, 'fig%i.png' % plot_num), bbox_inches='tight', edgecolor='none')
+    plt.savefig(os.path.join(dirsave, 'fig%i.pdf' % plot_num), bbox_inches='tight', edgecolor='none')
 
 # ==================================================================================================================
 #            DISTANCE VS. B-V
 # ==================================================================================================================
 
-kw = {'markersize': 6, 'color': 'g', 'marker': 'o', 'alpha': .6}
-axbvd = scatterPlot(dist, BV, labels=('Distance (pc)', 'B-V'), **kw)
+#kw = {'markersize': 6, 'color': 'g', 'marker': 'o', 'alpha': .6}
+#axbvd = scatterPlot(dist, BV, labels=('Distance (pc)', 'B-V'), **kw)
 # axbvd.plot(dist[target_obsind],BV[target_obsind],'ro',ms=6,mfc='none',mec='r',mew=2)
 # axbvd.set_title('%s'%basesim)
 # if save_plots: axbvd.savefig(os.path.join(dirsave,'target_dist_v_B-V_%s.png'%basesim))
@@ -709,8 +655,6 @@ Rj = 69.911e6  # meters
 Mj = 1.898e27  # Kg
 
 # BINS & DATA
-Mp, Rp = pd_e['Mp'], pd_e['Rp']
-sma, ecc = pd_e['sma'], pd_e['e']
 ebins = np.linspace(0, 1, 7)
 logarange = np.log10(arange)
 smabins = np.logspace(logarange[0], logarange[1], 10)
@@ -741,6 +685,7 @@ plt.legend(loc='best', fontsize=20)
 # if save_plots:
 plot_num += 1
 plt.savefig(os.path.join(dirsave, 'fig%i.png' % plot_num), bbox_inches='tight',edgecolor='none')
+plt.savefig(os.path.join(dirsave, 'fig%i.pdf' % plot_num), bbox_inches='tight',edgecolor='none')
 
 # =================================================================================
 
@@ -772,9 +717,9 @@ plt.legend()
 
 # HISTOGRAM OF PLANET MASS
 kw = {'histtype': 'step', 'lw': 3, 'color': 'g', 'label': 'Input Planets'}
-axps = histPlot(Mp / Mj, bins=massbins,
+axmp = histPlot(Mp / Mj, bins=massbins,
                 labels=(r'Planet Mass ($M_J$)', 'Number of Stars'), **kw)
-axps.hist(Mp[detind_pl] / Mj, bins=massbins, histtype='step', lw=3, color='magenta', label='Detected Planets');
+axmp.hist(Mp[detind_pl] / Mj, bins=massbins, histtype='step', lw=3, color='magenta', label='Detected Planets')
 plt.legend()
 # JX if save_plots:axps.savefig(os.path.join(dirsave,'planet_SMA_distribution_%s.png'%basesim))
 
@@ -784,7 +729,6 @@ WA = DDRM['det_WA']
 cntrst = 10 ** (DDRM['det_dMag'] / (-2.5))
 kw = {'markersize': 26, 'color': 'r', 'marker': 'o', 'alpha': .6, 'mec': 'none'}
 axcc = scatterPlot(WA, cntrst, figsize=(15, 15), **kw)
-# axcc.set_ylim(axbv.get_ylim()[::-1])
 axcc.set_ylabel(r'Planet-Star Flux Ratio', fontsize=35)
 axcc.set_xlabel(r'Working Angle (mas)', fontsize=35)
 axcc.set_xlim(-20, WA.max() + 50)
@@ -796,5 +740,6 @@ axcc.grid()
 if save_plots:
     plot_num += 1
     plt.savefig(os.path.join(dirsave, 'fig%i.png' % plot_num), bbox_inches='tight',edgecolor='none')
+    plt.savefig(os.path.join(dirsave, 'fig%i.pdf' % plot_num), bbox_inches='tight', edgecolor='none')
 
 print 'All Done!'

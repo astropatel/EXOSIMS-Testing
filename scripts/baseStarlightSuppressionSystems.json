@@ -1,0 +1,67 @@
+
+{
+ "HLC-565":{
+      "name": "HLC-565",
+      "lam": 565,
+      "BW": 0.10,
+      "IWA": 0.1475,
+      "OWA": 0.4917,
+      "ohTime":1,
+      "occ_trans": 0.2,
+      "core_thruput": 0.02,
+      "core_mean_intensity": 2e-12,
+      "core_area": 0.005
+  },
+ "HLC-465":{
+      "name": "HLC-465",
+      "lam": 465,
+      "BW": 0.10,
+      "IWA": 0.1475,
+      "OWA": 0.4917,
+      "ohTime":1,
+      "occ_trans": 0.2,
+      "core_thruput": 0.02,
+      "core_mean_intensity": 2e-12,
+      "core_area": 0.005
+  },    
+
+"SPC-660":{
+      "name": "SPC-660",
+      "lam": 660,
+      "BW": 0.18,
+      "IWA": 0.1608,
+      "OWA": 0.517,
+      "ohTime":1,
+      "occ_trans": 0.3,
+      "core_thruput": 0.04,
+      "core_mean_intensity": 4e-12,
+      "core_area": 0.005
+    },
+    
+"SPC-770":{
+      "name": "SPC-770",
+      "lam": 770,
+      "BW": 0.18,
+      "IWA": 0.1876,
+      "OWA": 0.6031,
+      "ohTime":1,
+      "occ_trans": 0.3,
+      "core_thruput": 0.04,
+      "core_mean_intensity": 4e-12,
+      "core_area": 0.005
+    },
+
+"SPC-890":{
+      "name": "SPC-890",
+      "lam": 890,
+      "BW": 0.2169,
+      "IWA": 0.1876,
+      "OWA": 0.6971,
+      "ohTime":1,
+      "occ_trans": 0.3,
+      "core_thruput": 0.04,
+      "core_mean_intensity": 4e-12,
+      "core_area": 0.005
+    }
+}
+    

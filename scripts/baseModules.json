@@ -1,0 +1,34 @@
+{
+"KnownRV": {
+    "PlanetPopulation": "KnownRVPlanets",
+    "StarCatalog": "StarCatalog",
+    "OpticalSystem": "Nemati",
+    "ZodiacalLight": "Stark",
+    "BackgroundSources": "GalaxiesFaintStars",
+    "PlanetPhysicalModel": "Forecaster",
+    "Observatory": "WFIRSTObservatoryL2",
+    "TimeKeeping": "TimeKeeping",
+    "PostProcessing": "PostProcessing",
+    "Completeness": "GarrettCompleteness",
+    "TargetList": "KnownRVPlanetsTargetList",
+    "SimulatedUniverse": "KnownRVPlanetsUniverse",
+    "SurveySimulation": "SurveySimulation",
+    "SurveyEnsemble": "SurveyEnsemble"
+  },
+  "KeplerLike": {
+    "PlanetPopulation": "KeplerLike1",
+    "StarCatalog": "EXOCAT1",
+    "OpticalSystem": "Nemati",
+    "ZodiacalLight": "Stark",
+    "BackgroundSources": "GalaxiesFaintStars",
+    "PlanetPhysicalModel": "Forecaster",
+    "Observatory": "WFIRSTObservatoryL2",
+    "TimeKeeping": "TimeKeeping",
+    "PostProcessing": "PostProcessing",
+    "Completeness": "GarrettCompleteness",
+    "TargetList": " ",
+    "SimulatedUniverse": "KeplerLikeUniverse",
+    "SurveySimulation": "SurveySimulation",
+    "SurveyEnsemble": "SurveyEnsemble"
+   }
+}

@@ -1,0 +1,71 @@
+{
+
+    "logfile":"logfile.txt",
+    "missionLife": 4, 
+    "missionPortion" : 0.1 , 
+    "missionStart" : 60676.0, 
+    "extendedLife" : 0, 
+    "pupilDiam" : 2.37, 
+    "shapeFac" :0.7854, 
+    "obscurFac" : 0.14728, 
+    "attenuation" : 0.441, 
+    "minComp" : 0.1, 
+    "telescopeKeepout" : 45, 
+    "settlingTime" : 1,
+    "dMagLim" :23, 
+    "intCutoff" :50 , 
+    "FAP" : 3E-7, 
+    "MDP" : 1E-3,  
+    
+    "scienceInstruments": [
+    {
+      "name": "imaging-EMCCD",
+      "QE": 0.88,
+      "CIC": 0.0013,
+      "ENF": 1.414,
+      "pitch": 1E-5,
+      "focal": 100,
+      "idark": 5E-4,
+      "sread": 0.2, 
+      "texp": 1000
+    },
+    {
+      "name": "spectro-CCD",
+      "QE": 0.88,
+      "CIC": 0.0013,
+      "sread": 3,
+      "Rs": 70,
+      "pitch": 1E-5,
+      "focal": 100,
+      "idark": 5E-4,
+      "texp": 1000 
+    }
+   ],
+    "starlightSuppressionSystems": [
+  {
+     
+      "name": "HLC-565",
+      "lam": 565,
+      "BW": 0.10,
+      "IWA": 0.1475,
+      "OWA": 0.4917,
+      "ohTime":1,
+      "occ_trans": 0.2,
+      "core_thruput": 0.01,
+      "core_mean_intensity": 2e-12,
+      "core_area": 0.005
+  },
+    {
+      "name": "SPC-660",
+      "lam": 660,
+      "BW": 0.18,
+      "IWA": 0.1608,
+      "OWA": 0.517,
+      "ohTime":1,
+      "occ_trans": 0.3,
+      "core_thruput": 0.015,
+      "core_mean_intensity": 4e-12,
+      "core_area": 0.005
+    }
+]
+    }

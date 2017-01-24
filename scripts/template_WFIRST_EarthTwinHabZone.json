@@ -1,19 +1,22 @@
 {
+  "missionLife": 1,
+  "missionPortion": 0.167,
+  "minComp": 0,
+  "dMagLim": 25,
+  "pupilDiam": 2.37,
+  "obscurFac": 0.14728,
+  "attenuation": 0.441,
+  "ppFact": 0.1,
   "scienceInstruments": [
     {
-      "type": "imaging-EMCCD",
-      "lam": 565,
-      "BW": 0.10,
+      "name": "imaging-EMCCD",
       "QE": 0.88,
       "CIC": 0.0013,
-      "sread": 16,
-      "ENF": 1.414,
-      "Gem": 500
+      "sread": 0,
+      "ENF": 1.414
     },
     {
-      "type": "spectro-CCD",
-      "lam": 660,
-      "BW": 0.18,
+      "name": "spectro-CCD",
       "QE": 0.88,
       "CIC": 0.0013,
       "sread": 3,
@@ -22,23 +25,35 @@
   ],
   "starlightSuppressionSystems": [
     {
-      "type": "internal-imaging-HLC"
+      "name": "HLC-565",
+      "lam": 565,
+      "BW": 0.10,
+      "occ_trans": 0.2,
+      "core_thruput": 0.02,
+      "core_mean_intensity": 2e-12,
+      "core_area": 0.005
     },
     {
-      "type": "internal-spectro-SPC"
+      "name": "SPC-660",
+      "lam": 660,
+      "BW": 0.18,
+      "occ_trans": 0.3,
+      "core_thruput": 0.04,
+      "core_mean_intensity": 4e-12,
+      "core_area": 0.005
     }
   ],
   "modules": {
     "PlanetPopulation": "EarthTwinHabZone2",
     "StarCatalog": "EXOCAT1",
-    "OpticalSystem": "WFIRSTOpticalSystem",
+    "OpticalSystem": "Nemati",
     "ZodiacalLight": "Stark",
     "BackgroundSources": "GalaxiesFaintStars",
     "PlanetPhysicalModel": "PlanetPhysicalModel",
     "Observatory": "WFIRSTObservatoryL2",
     "TimeKeeping": "TimeKeeping",
     "PostProcessing": "PostProcessing",
-    "Completeness": "BrownCompleteness",
+    "Completeness": "Completeness",
     "TargetList": "TargetList",
     "SimulatedUniverse": "SimulatedUniverse",
     "SurveySimulation": "SurveySimulation",

@@ -1,0 +1,18 @@
+{
+ "HLC_Detection":{
+      "instName": "imaging-EMCCD",
+      "systName": "HLC-565",
+      "SNR":5,
+      "lam": 565,
+      "BW": 0.10,
+      "detection":true
+    },    
+"SPC_Characterization":{
+      "instName": "spectro-CCD",
+      "systName": "SPC-660",
+      "lam": 660,
+      "BW": 0.18,
+      "SNR":10
+    }
+
+}
