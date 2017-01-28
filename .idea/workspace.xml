@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="988a130f-30c2-4b8f-83bf-e41156e4476d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Completeness/KnownRVPlanets_2yrs_5E+07stars_rpateltest.comp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Completeness/KnownRVPlanets_rpateltest_0.2years.acomp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skytest.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EXOSIMS_end2end+outputs.py" afterPath="$PROJECT_DIR$/EXOSIMS_end2end+outputs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/sampleScript_coron.json" afterPath="$PROJECT_DIR$/scripts/sampleScript_coron.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/template_WFIRST_EarthTwinHabZone.json" afterPath="$PROJECT_DIR$/scripts/template_WFIRST_EarthTwinHabZone.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/template_WFIRST_KeplerLike.json" afterPath="$PROJECT_DIR$/scripts/template_WFIRST_KeplerLike.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/template_WFIRST_KnownRV.json" afterPath="$PROJECT_DIR$/scripts/template_WFIRST_KnownRV.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/EXOSIMS_outputs-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/EXOSIMS_outputs-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EXOSIMS_outputs.ipynb" afterPath="$PROJECT_DIR$/EXOSIMS_outputs.ipynb" />
     </list>
     <ignored path="EXOSIMSTesting.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +28,8 @@
       <file leaf-file-name="EXOSIMS_end2end+outputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/EXOSIMS_end2end+outputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="369" column="12" selection-start-line="369" selection-start-column="12" selection-end-line="369" selection-end-column="12" />
+            <state relative-caret-position="267">
+              <caret line="245" column="45" selection-start-line="245" selection-start-column="45" selection-end-line="245" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -46,7 +38,7 @@
       <file leaf-file-name="baseParams.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/baseParams.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="374">
               <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               <folding />
             </state>
@@ -88,10 +80,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1920" />
-    <option name="y" value="-221" />
-    <option name="width" value="1920" />
-    <option name="height" value="1173" />
+    <option name="x" value="52" />
+    <option name="y" value="57" />
+    <option name="width" value="1267" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -301,7 +293,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="-221" width="1920" height="1173" extended-state="6" />
+    <frame x="52" y="57" width="1267" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28561354" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -339,11 +331,42 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/EXOSIMS_end2end+outputs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/baseParams.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/baseObservingModes.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/baseModules.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/template_rpateltest_KnownRV_2years.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
           <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -367,7 +390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
           <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -383,7 +405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -391,7 +412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -407,7 +427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -421,7 +440,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/baseParams.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="374">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding />
         </state>
@@ -431,14 +450,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EXOSIMS_end2end+outputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="369" column="12" selection-start-line="369" selection-start-column="12" selection-end-line="369" selection-end-column="12" />
+        <state relative-caret-position="267">
+          <caret line="245" column="45" selection-start-line="245" selection-start-column="45" selection-end-line="245" selection-end-column="45" />
           <folding />
         </state>
       </provider>
