@@ -386,16 +386,19 @@ for ikey, ivar in inputVars.iteritems():
     if ikey in useSpecs:
         try:
             useSpecs[ikey] = float(ivar)
-        except ValueError: print '%s=%s cant be converted to string'%(ikey,ivar)
+        except ValueError: print '%s=%s cant be converted to float'%(ikey,ivar)
 # REPLACE INPUT OF BAND INFO AND CREATE OBSERVING MODE ARRAY
 for okey in osmodekeys:
-    obsSpecs['HLC_Detection'][okey] = inputVars['D' + okey]
-    obsSpecs['SPC_Characterization'][okey] = inputVars['C' + okey]
+    try:
+        obsSpecs['HLC_Detection'][okey] = float(inputVars['D' + okey])
+    except ValueError: print '%s=%s cant be converted to float'%(okey,inputVars['D' + okey])
+    try:
+        obsSpecs['SPC_Characterization'][okey] = float(inputVars['C' + okey])
+    except ValueError: print '%s=%s cant be converted to float'%(okey,inputVars['D' + okey])
 
 # CREATES LIST OF 2 OBSERVING MODES
 useSpecs['observingModes'] = [obsSpecs['HLC_Detection'],
-                              obsSpecs['SPC_Characterization']
-                              ]
+                              obsSpecs['SPC_Characterization']]
 
 useSpecs['modules'] = modSpecs[inputVars['TargetType']]
 # ==============================================================================
