@@ -1,7 +1,7 @@
 {
     "logfile":"logfile.txt",
-    "missionLife": 6,
-    "missionPortion" : 0.5 ,
+    "missionLife": 5,
+    "missionPortion" : 0.1667 ,
     "missionStart" : 60676.0,
     "extendedLife" : 0,
     "pupilDiam" : 2.37,
@@ -11,7 +11,7 @@
     "minComp" : 0.1,
     "telescopeKeepout" : 45,
     "settlingTime" : 1,
-    "dMagLim" :22,
+    "dMagLim" :25,
     "intCutoff" :50 ,
     "FAP" : 3E-7,
     "MDP" : 1E-3,
@@ -66,12 +66,13 @@
       "core_mean_intensity": 4e-12,
       "core_area": 0.005
     }],
+
   "observingModes": [
     {
       "instName": "imaging-EMCCD",
       "systName": "HLC-565",
       "SNR":5,
-      "lam": 565,
+      "lam": 550,
       "BW": 0.10,
       "detection":true
     },
@@ -79,8 +80,8 @@
     {
       "instName": "spectro-CCD",
       "systName": "SPC-660",
-      "lam": 660,
-      "BW": 0.18,
+      "lam": 550,
+      "BW": 0.10,
       "SNR":10
     }],
 
@@ -91,7 +92,7 @@
     "ZodiacalLight": "Stark",
     "BackgroundSources": "GalaxiesFaintStars",
     "PlanetPhysicalModel": "Forecaster",
-    "Observatory": "WFIRSTObservatoryL2",
+    "Observatory": "",
     "TimeKeeping": "TimeKeeping",
     "PostProcessing": "PostProcessing",
     "Completeness": "GarrettCompleteness",

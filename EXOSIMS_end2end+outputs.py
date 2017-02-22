@@ -221,53 +221,58 @@ def histPlot(xdat, bins=15, ax0=None, labels=('x', 'y'), xlog=False, ylog=False,
 
 def reformat_DRM(drm):
 
-    # list of keys to not do anything with
-    dontdoanything = ['char_mode', 'slew_time', 'slew_angle',
-                      'slew_dv', 'slew_mass_used']
 
-    # list of keys with which I am not sure how to handle.
-    not_sure = ['FA_status', 'FA_SNR', 'FA_fEZ', 'FA_dMag',
-                'FA_WA', 'det_DV', 'det_mass_used','det_dF_lateral',
-                'det_dF_axial', 'char_dV', 'char_mass_used',
-                'char_dF_lateral', 'char_dF_axial', 'sc_mass']
+    # list of keys to not do anything with -- in terms of expanding or concatenating.
+    # THESE CAN BE UDPATED LATER
+    dontdoanything = ['char_mode', 'slew_time', 'slew_angle', 'slew_dv', 'slew_mass_used',
+                      'FA_fEZ', 'det_DV', 'det_mass_used', 'det_dF_lateral', 'det_dF_axial', 'char_dV',
+                      'char_mass_used', 'char_dF_lateral', 'char_dF_axial', 'sc_mass']
 
     # list of keys whose array elements need to be repeated based on number of planets
     # detected per star.
-    fill_keys = ['star_ind', 'arrival_time', 'det_time', 'char_time']
+    expand_keys = ['arrival_time', 'star_ind', 'det_time', 'char_time']
 
     # concatenate the arrays of these keys. In the end, each element in these arrays will have their
     # own individually mapped index in arrays in fill_keys.
-    flatten_keys = ['plan_inds', 'det_status', 'det_SNR',
-                   'det_fEZ', 'det_dMag', 'det_WA', 'char_status',
-                   'char_SNR', 'char_fEZ', 'char_dMag', 'char_WA']
-
+    concatenate_keys = ['plan_inds', 'det_status', 'det_SNR', 'det_fEZ', 'det_dMag', 'det_WA',
+                        'char_status', 'char_SNR', 'char_fEZ', 'char_dMag', 'char_WA',
+                        'FA_status', 'FA_SNR', 'FA_dMag', 'FA_WA', ]
 
     # COLLECT ALL KEYS IN DRM AND UNIQUE-IFY THE ARRAY
     kys = np.array([dt.keys() for dt in drm])
-    kys = np.unique(kys.flatten())
+    kys = np.unique(np.concatenate(kys))
 
     # CREATE DICTIONARY OF DRM BASED ON KEYWORDS
     ddrm = {}
+
     for ky in kys:
-        ddrm[ky] = np.array([dt[ky] for dt in drm])
+
+        # ADD VALUE, UNLESS EMPTY OR KEY DOE
+        ddrm[ky] = np.array([[np.nan] if ky not in dt or
+                             (not dt[ky] and not isinstance(dt[ky],(int,long,float)))
+                             else dt.get(ky,[np.nan]) for dt in drm])
 
     plan_raw_inds = ddrm['plan_inds']
 
-    # FILL OUT (expand) PROPER ARRAYS
-    for ky in fill_keys:
+    # FILL OUT PROPER ARRAYS
+    for ky in expand_keys:
         try:
             vals = ddrm[ky]
-            temp_val = [[vals[i]] * len(plan_raw_inds[i]) for i in xrange(len(plan_raw_inds))]
-            ddrm[ky] = np.concatenate(temp_val)
-        except KeyError:
-            print '%s not found.' % ky
+            # ADD SAME # AS PLANETS DETECTED.
+            # AT LEAST ONE ADDED EVEN WITH NO PLANETS DETECTED
+            temp_val = [[vals[i]] * len(plan_raw_inds[i])
+                        for i in xrange(len(plan_raw_inds)) ]
 
-    # CONCATENATE INTO 1 DIMENSION
-    for ky in flatten_keys:
+
+            ddrm[ky] = np.concatenate(temp_val)
+        except KeyError: print '%s not found.'%ky
+
+    for ky in concatenate_keys:
         try:
             ddrm[ky] = np.concatenate(ddrm[ky])
-        except KeyError:
-            print '%s not found' % ky
+        except KeyError: print '%s not found'%ky
+
+
 
     return ddrm
 
