@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="988a130f-30c2-4b8f-83bf-e41156e4476d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EXOSIMS_mock_parameters.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Joan_EXOSIMS_end2end.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SimResults/test.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/de432s.bsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logfile.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/orbit_post.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/planetdistribution.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rpatel_log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/rpatel_log.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimPlots/skytest.png" afterPath="$PROJECT_DIR$/SimPlots/skytest.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui_input.xlsx" afterPath="$PROJECT_DIR$/gui_input.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/EXOSIMSTesting.iml" afterPath="$PROJECT_DIR$/.idea/EXOSIMSTesting.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/EXOSIMS_end2end-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/EXOSIMS_end2end-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/EXOSIMS_outputs-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/EXOSIMS_outputs-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EXOSIMS_end2end+outputs.py" afterPath="$PROJECT_DIR$/EXOSIMS_end2end+outputs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EXOSIMS_end2end.ipynb" afterPath="$PROJECT_DIR$/EXOSIMS_end2end.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EXOSIMS_outputs.ipynb" afterPath="$PROJECT_DIR$/EXOSIMS_outputs.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimResults/Input_leftover_params.csv" afterPath="$PROJECT_DIR$/SimResults/Input_leftover_params.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimResults/Input_modules.csv" afterPath="$PROJECT_DIR$/SimResults/Input_modules.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimResults/Input_observingModes.csv" afterPath="$PROJECT_DIR$/SimResults/Input_observingModes.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimResults/Input_starlightSuppressionSystems.csv" afterPath="$PROJECT_DIR$/SimResults/Input_starlightSuppressionSystems.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/baseModules.json" afterPath="$PROJECT_DIR$/scripts/baseModules.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/sampleScript_rpatel.json" afterPath="$PROJECT_DIR$/scripts/sampleScript_rpatel.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/sampleScript_rpatel2_ludacris.json" afterPath="$PROJECT_DIR$/scripts/sampleScript_rpatel2_ludacris.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/template_WFIRST_KeplerLike.json" afterPath="$PROJECT_DIR$/scripts/template_WFIRST_KeplerLike.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/template_WFIRST_KnownRV.json" afterPath="$PROJECT_DIR$/scripts/template_WFIRST_KnownRV.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/template_rpateltest_KnownRV.json" afterPath="$PROJECT_DIR$/scripts/template_rpateltest_KnownRV.json" />
-    </list>
+    <list default="true" id="988a130f-30c2-4b8f-83bf-e41156e4476d" name="Default" comment="" />
     <ignored path="EXOSIMSTesting.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,31 +38,12 @@
                           </provider>
                         </entry>
                       </file>
-                      <file leaf-file-name="template_WFIRST_KnownRV.json" pinned="false" current-in-tab="false">
+                      <file leaf-file-name="template_WFIRST_KnownRV.json" pinned="false" current-in-tab="true">
                         <entry file="file://$PROJECT_DIR$/scripts/template_WFIRST_KnownRV.json">
                           <provider selected="true" editor-type-id="text-editor">
                             <state relative-caret-position="990">
                               <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="96" selection-end-column="3" />
                               <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="EXOSIMS_end2end+outputs.py" pinned="false" current-in-tab="true">
-                        <entry file="file://$PROJECT_DIR$/EXOSIMS_end2end+outputs.py">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state relative-caret-position="351">
-                              <caret line="416" column="4" lean-forward="false" selection-start-line="416" selection-start-column="4" selection-end-line="416" selection-end-column="4" />
-                              <folding>
-                                <element signature="e#1854#3164#0" expanded="false" />
-                                <element signature="e#3509#5130#0" expanded="false" />
-                                <element signature="e#5222#5992#0" expanded="false" />
-                                <element signature="e#6121#6910#0" expanded="false" />
-                                <element signature="e#7005#7776#0" expanded="false" />
-                                <element signature="e#7913#8499#0" expanded="false" />
-                                <element signature="e#11510#12542#0" expanded="false" />
-                                <element signature="e#12571#13616#0" expanded="false" />
-                              </folding>
                             </state>
                           </provider>
                         </entry>
@@ -522,17 +473,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1854#3164#0" expanded="false" />
-            <element signature="e#3509#5130#0" expanded="false" />
-            <element signature="e#5222#5992#0" expanded="false" />
-            <element signature="e#6121#6910#0" expanded="false" />
-            <element signature="e#7005#7776#0" expanded="false" />
-            <element signature="e#7913#8499#0" expanded="false" />
-            <element signature="e#11510#12542#0" expanded="false" />
-            <element signature="e#12571#13616#0" expanded="false" />
-            <element signature="e#13750#13979#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -561,17 +502,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4471">
           <caret line="263" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
-          <folding>
-            <element signature="e#1854#3164#0" expanded="false" />
-            <element signature="e#3509#5130#0" expanded="false" />
-            <element signature="e#5222#5992#0" expanded="false" />
-            <element signature="e#6121#6910#0" expanded="false" />
-            <element signature="e#7005#7776#0" expanded="false" />
-            <element signature="e#7913#8499#0" expanded="false" />
-            <element signature="e#11510#12542#0" expanded="false" />
-            <element signature="e#12571#13616#0" expanded="false" />
-            <element signature="e#13750#13979#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -600,17 +531,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1854#3164#0" expanded="false" />
-            <element signature="e#3509#5130#0" expanded="false" />
-            <element signature="e#5222#5992#0" expanded="false" />
-            <element signature="e#6121#6910#0" expanded="false" />
-            <element signature="e#7005#7776#0" expanded="false" />
-            <element signature="e#7913#8499#0" expanded="false" />
-            <element signature="e#11510#12542#0" expanded="false" />
-            <element signature="e#12571#13616#0" expanded="false" />
-            <element signature="e#13750#13979#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -640,17 +561,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1854#3164#0" expanded="false" />
-            <element signature="e#3509#5130#0" expanded="false" />
-            <element signature="e#5222#5992#0" expanded="false" />
-            <element signature="e#6121#6910#0" expanded="false" />
-            <element signature="e#7005#7776#0" expanded="false" />
-            <element signature="e#7913#8499#0" expanded="false" />
-            <element signature="e#11510#12542#0" expanded="false" />
-            <element signature="e#12571#13616#0" expanded="false" />
-            <element signature="e#13750#13979#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -658,17 +569,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1854#3164#0" expanded="false" />
-            <element signature="e#3509#5130#0" expanded="false" />
-            <element signature="e#5222#5992#0" expanded="false" />
-            <element signature="e#6121#6910#0" expanded="false" />
-            <element signature="e#7005#7776#0" expanded="false" />
-            <element signature="e#7913#8499#0" expanded="false" />
-            <element signature="e#11510#12542#0" expanded="false" />
-            <element signature="e#12571#13616#0" expanded="false" />
-            <element signature="e#13750#13979#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -677,17 +578,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4641">
           <caret line="279" column="40" lean-forward="false" selection-start-line="279" selection-start-column="40" selection-end-line="279" selection-end-column="40" />
-          <folding>
-            <element signature="e#1854#3164#0" expanded="false" />
-            <element signature="e#3509#5130#0" expanded="false" />
-            <element signature="e#5222#5992#0" expanded="false" />
-            <element signature="e#6121#6910#0" expanded="false" />
-            <element signature="e#7005#7776#0" expanded="false" />
-            <element signature="e#7913#8499#0" expanded="false" />
-            <element signature="e#11510#12542#0" expanded="false" />
-            <element signature="e#12571#13616#0" expanded="false" />
-            <element signature="e#13750#13979#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -826,28 +717,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/EXOSIMS_end2end+outputs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="416" column="4" lean-forward="false" selection-start-line="416" selection-start-column="4" selection-end-line="416" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/template_WFIRST_KnownRV.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="96" selection-end-column="3" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EXOSIMS_end2end+outputs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="416" column="4" lean-forward="false" selection-start-line="416" selection-start-column="4" selection-end-line="416" selection-end-column="4" />
-          <folding>
-            <element signature="e#1854#3164#0" expanded="false" />
-            <element signature="e#3509#5130#0" expanded="false" />
-            <element signature="e#5222#5992#0" expanded="false" />
-            <element signature="e#6121#6910#0" expanded="false" />
-            <element signature="e#7005#7776#0" expanded="false" />
-            <element signature="e#7913#8499#0" expanded="false" />
-            <element signature="e#11510#12542#0" expanded="false" />
-            <element signature="e#12571#13616#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
