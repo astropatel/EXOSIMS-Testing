@@ -1,0 +1,9 @@
+Submit time => 'Thu Jul 27 18:05:19 2017 (GMT)'
+Session ID => lhbq
+Session Directory => /var/www/wfirst-ops-15-11-05/html/sims/tools/exosimsCGI/bin/../results/lhbq
+Executable => EXOSIMS_end2end+outputs.py
+Executable Version => 1.0
+GUI Version => 3.0_beta3
+Remote Host => 134.4.24.101
+User Agent => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Referer => https://wfirst.ipac.caltech.edu/sims/tools/exosimsCGI/exosimsCGI.html

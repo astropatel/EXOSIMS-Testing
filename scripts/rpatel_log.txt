@@ -1,1 +1,0 @@
-INFO: MissionSim.py(198): start_logging: Starting log.

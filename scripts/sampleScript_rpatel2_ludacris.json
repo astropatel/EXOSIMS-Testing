@@ -1,20 +1,21 @@
 {
     "logfile":"logfile.txt",
-    "missionLife": 5,
-    "missionPortion" : 0.1667 ,
-    "missionStart" : 60676.0,
+    "missionLife": 3,
+    "missionPortion" : 0.6,
     "extendedLife" : 0,
     "pupilDiam" : 2.37,
     "shapeFac" :0.7854,
     "obscurFac" : 0.14728,
     "attenuation" : 0.441,
-    "minComp" : 0.1,
-    "telescopeKeepout" : 45,
-    "settlingTime" : 1,
-    "dMagLim" :27,
-    "intCutoff" :50 ,
+    "minComp" : 0.01,
+    "telescopeKeepout" : 45.0,
+    "settlingTime" : 0.0,
+    "dMagLim" :22,
+    "intCutoff" :14,
     "FAP" : 3E-7,
     "MDP" : 1E-3,
+    "ppFact":0.3,
+    "eta" : 0.8,
 
     "scienceInstruments": [
     {
@@ -22,10 +23,8 @@
       "QE": 0.88,
       "CIC": 0.0013,
       "ENF": 1.414,
-      "pitch": 1E-5,
-      "focal": 100,
       "idark": 5E-4,
-      "sread": 0.2,
+      "sread": 1.7E-6,
       "texp": 1000
     },
     {
@@ -42,29 +41,28 @@
    ],
     "starlightSuppressionSystems": [
   {
-
       "name": "HLC-565",
       "lam": 565,
       "BW": 0.10,
-      "IWA": 0.0,
-      "OWA": 0.4917,
-      "ohTime":1,
-      "occ_trans": 0.3,
-      "core_thruput": 0.2,
-      "core_mean_intensity": 2e-12,
-      "core_area": 0.005
+      "IWA": 0.01,
+      "OWA": 1.4917,
+      "ohTime":0.001,
+      "occ_trans": 0.2,
+      "core_thruput": 0.1,
+      "core_mean_intensity": 2e-11
+
   },
     {
       "name": "SPC-660",
       "lam": 660,
       "BW": 0.18,
-      "IWA": 0.0,
-      "OWA": 0.517,
-      "ohTime":1,
+      "IWA": 0.01608,
+      "OWA": 1.517,
+      "ohTime":0.001,
       "occ_trans": 0.3,
-      "core_thruput": 0.2,
-      "core_mean_intensity": 4e-12,
-      "core_area": 0.005
+      "core_thruput": 0.015,
+      "core_mean_intensity": 4e-12
+
     }],
 
   "observingModes": [
@@ -82,7 +80,7 @@
       "systName": "SPC-660",
       "lam": 550,
       "BW": 0.10,
-      "SNR":10
+      "SNR":5
     }],
 
   "modules": {
@@ -91,8 +89,8 @@
     "OpticalSystem": "Nemati",
     "ZodiacalLight": "Stark",
     "BackgroundSources": "GalaxiesFaintStars",
-    "PlanetPhysicalModel": "Forecaster",
-    "Observatory": "",
+    "PlanetPhysicalModel": "FortneyMarleyCahoyMix1",
+    "Observatory": "WFIRSTObservatoryL2",
     "TimeKeeping": "TimeKeeping",
     "PostProcessing": "PostProcessing",
     "Completeness": "GarrettCompleteness",

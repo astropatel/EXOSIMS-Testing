@@ -1,0 +1,40 @@
+header,description
+st_name,Star ID
+st_spt,Stellar Spectral type
+st_parallax,Stellar parallax (mas)
+st_Umag,Stellar U mag (mag)
+st_Bmag,Stellar B mag (mag)
+st_Vmag,Stellar V mag (mag)
+st_Rmag,Stellar R mag (mag)
+st_Imag,Stellar I mag (mag)
+st_Jmag,Stellar J mag (mag)
+st_Hmag,Stellar H mag (mag)
+st_Kmag,Stellar K mag (mag)
+st_distance,Stellar Distance (pc)
+st_B-V,Stellar B-V color (mag)
+st_M_v,Stellar absolute V mag (mag)
+st_BC,Stellar bolometric correction
+pl_mass,Planet mass (M_jupiter)
+pl_rad,Planet radius (R_jupiter)
+pl_sma,Planet semi-major axis (AU)
+pl_ecc,Planet eccentricity
+pl_wangle,Planet star-separation [working angle] (arcsec)
+pl_albedo,Planet albedo
+pl_phi,Planet phase angle
+pl_incl,Planet inclination
+pl_fEZ,Surface brightness o fexozodicacal light (1/arcsec^2)
+pl_dMag,planet to star magnitude difference (mag)
+pl_WA,planet working angle at detection (mas)
+char_status, characterization status for each planet orbiting the observed target star where 1 is full spectrum -1 partial spectrum and 0 not characterized
+det_WA, working angles at detection in units of mas for each planet orbiting the observed target star
+char_time,Integration time for characterization in units of day
+char_fEZ, exo-zodi surface brightnesses at characterization in units of 1/arcsec2 for each planet orbiting the observed target star
+det_fEZ,exo-zodi surface brightnesses at detection in units of 1/arcsec2 for each planet orbiting the observed target star.
+det_time,Integration time for detection in units of day
+arrival_time,Elapsed time since mission start when observation begins in units of day
+det_status, detection status for each planet orbiting the observed target star where 1 is detection 0 missed detection -1 below IWA and -2 beyond OWA
+char_dMag, delta magnitudes at characterization for each planet orbiting the observed target star
+det_SNR, detection SNR values for each planet orbiting the observed target star. Non-observable planets have their SNR set to 0.
+char_SNR,characterization SNR values for each planet orbiting the observed target star. Non-observable planets have their SNR set to 0.
+char_WA,working angles at characterization in units of mas for each planet orbiting the observed target star
+det_dMag, delta magnitudes at detection for each planet orbiting the observed target star

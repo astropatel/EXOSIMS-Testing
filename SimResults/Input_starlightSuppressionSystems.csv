@@ -8,12 +8,13 @@ PSF,"[[ 1.  1.  1.]
  [ 1.  1.  1.]]"
 core_contrast,1e-09
 OWA,inf
-BW,0.1
 ohTime,1.0
+BW,0.1
+platescale,
 occ_trans,0.2
 core_mean_intensity,2e-12
 samp,10.0
-core_area,6e-10
+core_area,0.005
 core_thruput,0.02
 occulter,False
 starlightSuppressionSystems,2
@@ -24,13 +25,14 @@ deltaLam,118.8
 PSF,"[[ 1.  1.  1.]
  [ 1.  1.  1.]
  [ 1.  1.  1.]]"
-core_contrast,6e-10
+core_contrast,1e-09
 OWA,inf
-BW,0.18
 ohTime,1.0
-occ_trans,0.2
-core_mean_intensity,
+BW,0.18
+platescale,
+occ_trans,0.3
+core_mean_intensity,4e-12
 samp,10.0
-core_area,
-core_thruput,0.02
+core_area,0.005
+core_thruput,0.04
 occulter,False

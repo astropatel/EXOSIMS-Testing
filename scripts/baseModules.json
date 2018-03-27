@@ -1,7 +1,7 @@
 {
 "KnownRV": {
     "PlanetPopulation": "KnownRVPlanets",
-    "StarCatalog": "StarCatalog",
+    "StarCatalog": "EXOCAT1",
     "OpticalSystem": "Nemati",
     "ZodiacalLight": "Stark",
     "BackgroundSources": "GalaxiesFaintStars",
@@ -17,18 +17,35 @@
   },
   "KeplerLike": {
     "PlanetPopulation": "KeplerLike1",
-    "StarCatalog": "EXOCAT1",
+    "StarCatalog": "EXOSCAT1",
     "OpticalSystem": "Nemati",
     "ZodiacalLight": "Stark",
     "BackgroundSources": "GalaxiesFaintStars",
-    "PlanetPhysicalModel": "Forecaster",
+    "PlanetPhysicalModel": "FortneyMarleyCahoyMix1",
     "Observatory": "WFIRSTObservatoryL2",
     "TimeKeeping": "TimeKeeping",
     "PostProcessing": "PostProcessing",
     "Completeness": "GarrettCompleteness",
-    "TargetList": " ",
+    "TargetList": "TargetList",
     "SimulatedUniverse": "KeplerLikeUniverse",
     "SurveySimulation": "SurveySimulation",
     "SurveyEnsemble": "SurveyEnsemble"
-   }
+   },
+
+  "EarthTwin": {
+    "PlanetPopulation": "EarthTwinHabZone2",
+    "StarCatalog": "EXOCAT1",
+    "OpticalSystem": "Nemati",
+    "ZodiacalLight": "Stark",
+    "BackgroundSources": "GalaxiesFaintStars",
+    "PlanetPhysicalModel": "PlanetPhysicalModel",
+    "Observatory": "WFIRSTObservatoryL2",
+    "TimeKeeping": "TimeKeeping",
+    "PostProcessing": "PostProcessing",
+    "Completeness": "GarrettCompleteness",
+    "TargetList": "TargetList",
+    "SimulatedUniverse": "SimulatedUniverse",
+    "SurveySimulation": "SurveySimulation",
+    "SurveyEnsemble": "SurveyEnsemble"
+  }
 }

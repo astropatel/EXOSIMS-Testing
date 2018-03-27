@@ -1,7 +1,7 @@
 Observatory,WFIRSTObservatoryL2
 Completeness,GarrettCompleteness
-SimulatedUniverse,KnownRVPlanetsUniverse
-OpticalSystem,KasdinBraems
+SimulatedUniverse,KeplerLikeUniverse
+OpticalSystem,Nemati
 ZodiacalLight,Stark
 TimeKeeping,TimeKeeping
 SurveySimulation,SurveySimulation
@@ -9,6 +9,6 @@ SurveyEnsemble,SurveyEnsemble
 PostProcessing,PostProcessing
 PlanetPhysicalModel,FortneyMarleyCahoyMix1
 BackgroundSources,GalaxiesFaintStars
-TargetList,KnownRVPlanetsTargetList
-StarCatalog,StarCatalog
-PlanetPopulation,KnownRVPlanets
+TargetList,TargetList
+StarCatalog,EXOCAT1
+PlanetPopulation,KeplerLike1

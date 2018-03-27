@@ -2,7 +2,7 @@
   "missionLife": 1,
   "missionPortion": 0.167,
   "minComp": 0,
-  "dMagLim": 25,
+  "dMagLim": 19,
   "pupilDiam": 2.37,
   "obscurFac": 0.14728,
   "attenuation": 0.441,
@@ -13,7 +13,8 @@
       "QE": 0.88,
       "CIC": 0.0013,
       "sread": 0,
-      "ENF": 1.414
+      "ENF": 1.414,
+      "detection":true
     },
     {
       "name": "spectro-CCD",
@@ -53,7 +54,7 @@
     "Observatory": "WFIRSTObservatoryL2",
     "TimeKeeping": "TimeKeeping",
     "PostProcessing": "PostProcessing",
-    "Completeness": "Completeness",
+    "Completeness": "GarrettCompleteness",
     "TargetList": "TargetList",
     "SimulatedUniverse": "KeplerLikeUniverse",
     "SurveySimulation": "SurveySimulation",

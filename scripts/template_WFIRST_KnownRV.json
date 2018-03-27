@@ -1,19 +1,31 @@
 {
-  "missionLife": 1,
-  "missionPortion": 0.167,
-  "minComp": 0,
-  "dMagLim": 25,
+ "logfile":"logfile.txt",
+  "telescopeKeepout" : 45.0,
+  "intCutoff" :14,
+  "FAP" : 3E-7,
+  "MDP" : 1E-3,
+  "settlingTime" : 0.0,
+  "shapeFac" :0.7854,
+  "eta" : 0.8,
+  "missionLife": 6,
+  "missionPortion": 0.6,
+  "minComp": 0.01,
+  "extendedLife" : 0,
+  "dMagLim": 23.0,
   "pupilDiam": 2.37,
   "obscurFac": 0.14728,
   "attenuation": 0.441,
   "ppFact": 0.1,
+
   "scienceInstruments": [
     {
       "name": "imaging-EMCCD",
       "QE": 0.88,
       "CIC": 0.0013,
-      "sread": 0,
-      "ENF": 1.414
+      "sread": 1.7E-6,
+      "idark": 5E-4,
+      "ENF": 1.414,
+      "texp":1000
     },
     {
       "name": "spectro-CCD",
@@ -23,41 +35,64 @@
       "Rs": 70
     }
   ],
+
+
   "starlightSuppressionSystems": [
     {
       "name": "HLC-565",
       "lam": 565,
       "BW": 0.10,
+      "IWA": 0.13,
+      "OWA": 1.44,
       "occ_trans": 0.2,
       "core_thruput": 0.02,
-      "core_mean_intensity": 2e-12,
-      "core_area": 0.005
+      "core_mean_intensity": 2e-12
     },
     {
-      "name": "SPC-660",
-      "lam": 660,
+      "name": "SPC-800",
+      "lam": 800,
       "BW": 0.18,
+      "IWA": 0.17,
+      "OWA": 0.64,
       "occ_trans": 0.3,
       "core_thruput": 0.04,
       "core_mean_intensity": 4e-12,
       "core_area": 0.005
     }
   ],
+
+  "observingModes": [
+    {
+      "instName": "imaging-EMCCD",
+      "systName": "HLC-565",
+      "SNR":5,
+      "lam": 565,
+      "BW": 0.10,
+      "detection":true
+    },
+
+    {
+      "instName": "spectro-CCD",
+      "systName": "SPC-800",
+      "lam": 400,
+      "BW": 0.10,
+      "SNR":5
+    }],
+
   "modules": {
     "PlanetPopulation": "KnownRVPlanets",
-    "StarCatalog": "StarCatalog",
+    "StarCatalog": " ",
     "OpticalSystem": "Nemati",
     "ZodiacalLight": "Stark",
     "BackgroundSources": "GalaxiesFaintStars",
-    "PlanetPhysicalModel": "FortneyMarleyCahoyMix1",
+    "PlanetPhysicalModel": "Forecaster",
     "Observatory": "WFIRSTObservatoryL2",
-    "TimeKeeping": "TimeKeeping",
-    "PostProcessing": "PostProcessing",
-    "Completeness": "Completeness",
+    "TimeKeeping": " ",
+    "PostProcessing": " ",
+    "Completeness": "GarrettCompleteness",
     "TargetList": "KnownRVPlanetsTargetList",
     "SimulatedUniverse": "KnownRVPlanetsUniverse",
-    "SurveySimulation": "SurveySimulation",
-    "SurveyEnsemble": "SurveyEnsemble"
+    "SurveySimulation": " ",
+    "SurveyEnsemble": " "
   }
 }
-

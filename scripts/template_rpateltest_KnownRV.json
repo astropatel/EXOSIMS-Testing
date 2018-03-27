@@ -1,93 +1,97 @@
 {
-  "missionLife": 0.2,
-  "missionPortion": 0.167,
-  "keepStarCatalog": true,
-  "minComp": 0,
-  "dMagLim": 21,
+  "missionLife": 6,
+  "missionPortion": 1.0,
+  "minComp": 0.2,
+  "dMagLim": 19,
+  "dMagint":19,
   "pupilDiam": 2.37,
-  "obscurFac": 0.14728,
+  "obscurFac": 0.1024,
+  "settlingTime": 0.02,
   "attenuation": 0.441,
-  "ppFact": 0.2,
+  "ppFact": 0.3,
+  "intCutoff":100,
+  "WA0":0.01,
+  "telescopeKeepout":10,
   "logfile":"rpatel_log.txt",
 
   "scienceInstruments": [
-    {
-      "name": "imaging-EMCCD",
-      "QE": 0.88,
-      "CIC": 0.0013,
-      "sread": 0,
-      "ENF": 1.414
+    { "name": "imager",
+      "QE": 0.72,
+      "FoV": 9.5,
+      "pixelNumber": 1024,
+      "pixelSize": 1.3e-5,
+      "sread": 1.7e-6,
+      "idark": 3e-5,
+      "CIC": 2.1e-3,
+      "texp": 30,
+      "ENF": 1.41
     },
-    {
-      "name": "spectro-CCD",
-      "QE": 0.88,
-      "CIC": 0.0013,
-      "sread": 3,
-      "Rs": 70
+    { "name": "spectro",
+      "QE": 0.72,
+      "FoV": 1,
+      "pixelNumber": 76,
+      "pixelSize": 1.74e-4,
+      "sread": 1.7e-6,
+      "idark": 3e-5,
+      "CIC": 2.1e-3,
+      "texp": 30,
+      "ENF": 1.41,
+      "Rs": 50
     }
   ],
-"starlightSuppressionSystems": [
-    {
-      "name": "HLC-565",
+  "starlightSuppressionSystems": [
+    { "name": "HLC-565",
       "lam": 565,
       "BW": 0.10,
-      "occ_trans": 0.2,
-      "core_thruput": 0.02,
-      "core_mean_intensity": 2e-12,
-      "core_area": 6e-10
+      "IWA": 0.15,
+      "occ_trans": 0.3,
+      "core_thruput":0.02,
+      "core_mean_intensity": 4e-12,
+      "core_area": 0.005,
+      "core_platescale": 0.30
     },
-    {
-      "name": "SPC-660",
-      "lam": 660,
+    { "name": "SPC-800",
+      "lam": 800,
       "BW": 0.18,
-      "occ_trans": 0.2,
-      "core_thruput": 0.02,
-      "core_contrast": 6e-10
+      "IWA": 0.19,
+      "occ_trans": 0.3,
+      "core_thruput":0.02,
+      "core_mean_intensity": 4e-12,
+      "core_area": 0.005,
+      "core_platescale": 0.30
     }
   ],
-    
-"observingModes": [
-    {
-      "instName": "imaging-EMCCD",
+  "observingModes": [
+    { "instName": "imager",
       "systName": "HLC-565",
-      "detection": true
+      "detectionMode": true,
+      "lam":550,
+      "BW":0.2,
+      "SNR":5
     },
-    {
-      "instName": "imaging-EMCCD",
-      "systName": "HLC-565",
-      "lam": 660,
-      "BW": 0.18
+    { "instName": "spectro",
+      "systName": "SPC-800",
+      "lam": 550,
+      "SNR": 5
     },
-    {
-      "instName": "spectro-CCD",
-      "systName": "SPC-660",
-      "SNR": 10
-    },
-    {
-      "instName": "spectro-CCD",
-      "systName": "SPC-660",
-      "lam": 770,
-      "SNR": 10
-    },
-    {
-      "instName": "spectro-CCD",
-      "systName": "SPC-660",
-      "lam": 890,
-      "SNR": 10
+    { "instName": "spectro",
+      "systName": "SPC-800",
+      "lam": 600,
+      "SNR": 5
     }
-  ],    
+  ],
     "modules": {
     "PlanetPopulation": "KnownRVPlanets",
-    "StarCatalog": "StarCatalog",
-    "OpticalSystem": "KasdinBraems",
+    "StarCatalog": "SIMBAD300Catalog",
+    "OpticalSystem": "Nemati",
     "ZodiacalLight": "Stark",
     "BackgroundSources": "GalaxiesFaintStars",
-    "PlanetPhysicalModel": "FortneyMarleyCahoyMix1",
+    "PlanetPhysicalModel": "Forecaster",
     "Observatory": "WFIRSTObservatoryL2",
     "TimeKeeping": "TimeKeeping",
     "PostProcessing": "PostProcessing",
     "Completeness": "GarrettCompleteness",
-    "TargetList": "KnownRVPlanetsTargetList",
+    "TargetList": "TargetList",
     "SimulatedUniverse": "KnownRVPlanetsUniverse",
     "SurveySimulation": "SurveySimulation",
     "SurveyEnsemble": "SurveyEnsemble"
