@@ -1,0 +1,34 @@
+INFO: MissionSim.py(142): __init__: Start Logging: loglevel = 20 (INFO)
+INFO: SurveySimulation.py(284): run_sim: OB1: survey beginning.
+INFO: SurveySimulation.py(317): run_sim:   Observation #1, star ind 41 (of 46) with 1 planet(s), mission time: 0.0
+INFO: SurveySimulation.py(317): run_sim:   Observation #2, star ind 3 (of 46) with 5 planet(s), mission time: 1.03
+INFO: SurveySimulation.py(317): run_sim:   Observation #3, star ind 45 (of 46) with 4 planet(s), mission time: 2.32
+INFO: SurveySimulation.py(737): observation_detection:    - Detected planet inds [78] (1/4)
+INFO: SurveySimulation.py(317): run_sim:   Observation #4, star ind 2 (of 46) with 3 planet(s), mission time: 3.35
+INFO: SurveySimulation.py(317): run_sim:   Observation #5, star ind 25 (of 46) with 2 planet(s), mission time: 4.43
+INFO: SurveySimulation.py(317): run_sim:   Observation #6, star ind 10 (of 46) with 1 planet(s), mission time: 5.59
+INFO: SurveySimulation.py(317): run_sim:   Observation #7, star ind 35 (of 46) with 1 planet(s), mission time: 6.7
+INFO: SurveySimulation.py(317): run_sim:   Observation #8, star ind 19 (of 46) with 1 planet(s), mission time: 11.33
+INFO: SurveySimulation.py(317): run_sim:   Observation #9, star ind 33 (of 46) with 1 planet(s), mission time: 13.18
+INFO: SurveySimulation.py(317): run_sim:   Observation #10, star ind 28 (of 46) with 2 planet(s), mission time: 14.32
+INFO: SurveySimulation.py(317): run_sim:   Observation #11, star ind 13 (of 46) with 1 planet(s), mission time: 15.86
+INFO: SurveySimulation.py(317): run_sim:   Observation #12, star ind 44 (of 46) with 1 planet(s), mission time: 16.94
+INFO: SurveySimulation.py(317): run_sim:   Observation #13, star ind 17 (of 46) with 2 planet(s), mission time: 18.07
+INFO: SurveySimulation.py(317): run_sim:   Observation #14, star ind 32 (of 46) with 1 planet(s), mission time: 19.23
+INFO: SurveySimulation.py(317): run_sim:   Observation #15, star ind 18 (of 46) with 1 planet(s), mission time: 20.43
+INFO: SurveySimulation.py(317): run_sim:   Observation #16, star ind 36 (of 46) with 1 planet(s), mission time: 22.41
+INFO: SurveySimulation.py(317): run_sim:   Observation #17, star ind 29 (of 46) with 1 planet(s), mission time: 25.56
+INFO: SurveySimulation.py(317): run_sim:   Observation #18, star ind 16 (of 46) with 4 planet(s), mission time: 26.87
+INFO: SurveySimulation.py(317): run_sim:   Observation #19, star ind 11 (of 46) with 1 planet(s), mission time: 29.5
+INFO: SurveySimulation.py(317): run_sim:   Observation #20, star ind 12 (of 46) with 2 planet(s), mission time: 45.35
+INFO: SurveySimulation.py(317): run_sim:   Observation #21, star ind 24 (of 46) with 3 planet(s), mission time: 91.99
+INFO: SurveySimulation.py(317): run_sim:   Observation #22, star ind 20 (of 46) with 4 planet(s), mission time: 110.68
+INFO: SurveySimulation.py(317): run_sim:   Observation #23, star ind 26 (of 46) with 2 planet(s), mission time: 111.76
+INFO: SurveySimulation.py(317): run_sim:   Observation #24, star ind 14 (of 46) with 1 planet(s), mission time: 113.22
+INFO: SurveySimulation.py(317): run_sim:   Observation #25, star ind 23 (of 46) with 2 planet(s), mission time: 116.35
+INFO: SurveySimulation.py(317): run_sim:   Observation #26, star ind 27 (of 46) with 1 planet(s), mission time: 117.77
+INFO: SurveySimulation.py(317): run_sim:   Observation #27, star ind 38 (of 46) with 1 planet(s), mission time: 119.02
+INFO: SurveySimulation.py(317): run_sim:   Observation #28, star ind 31 (of 46) with 1 planet(s), mission time: 129.32
+INFO: SurveySimulation.py(392): run_sim: Mission complete: no more time available.
+Simulation duration: 2.
+Results stored in SurveySimulation.DRM (Design Reference Mission).

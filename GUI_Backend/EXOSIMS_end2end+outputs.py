@@ -20,11 +20,12 @@ sys.path.insert(0, '/var/www/wfirst-dev/html/sims/tools/EXOSIMS')
 #print(sys.path)
 #print 'in Python: sys.argv= ', sys.argv
 
-import EXOSIMS.MissionSim as msim
-from astropy import constants as con
 import numpy as np
 import json, os, csv, string
 
+import EXOSIMS.MissionSim as msim
+from astropy import constants as con
+import astropy
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -117,7 +118,8 @@ def plot_setup(axis, gridon=False, minortickson=True,
     if ylog:
         axis.set_yscale('log', nonposy='clip')
 
-    plt.rc('font', **{'family': 'sans-serif', 'sans-serif': ['Helvetica']})
+    plt.rc('font', **{'family': 'sans-serif',
+                      'sans-serif': ['Helvetica']})
     plt.rcParams['mathtext.fontset'] = 'stixsans'
     axis.tick_params(axis='both', which='major', labelsize=ticklabel_fontsize)
     plt.rc("axes", linewidth=axes_linewidth)
@@ -243,7 +245,7 @@ def skyplot(ra, dec, figsize=(20, 20), projection='mollweide', axisbg='white',
                 ticklcolor=None, ticklabels=None):
 
     fig = plt.figure(figsize=figsize)
-    ax = fig.add_subplot(111, projection=projection, axisbg=axisbg)
+    ax = fig.add_subplot(111, projection=projection, facecolor=axisbg)
 
     plt.setp(ax.spines.values(), linewidth=10)
     if ticklcolor is not None:
@@ -273,49 +275,90 @@ def reformat_DRM(drm):
     THIS REFORMATTER TURNS IT INTO A DICTIONARY OF RESULTS
 
     """
+    # ========================================================================
+    # WHAT KEYS WILL BE ORGANIZED HOW - UPDATED AS NEEDED
+    # ------------------------------------------------------------------------
+    # Don't do anything with these initially- these are dictionaries in the DRM.
+    dontdoanything =['det_params','char_params']
 
-    # list of keys to not do anything with -- in terms of expanding or concatenating.
-    # THESE CAN BE UDPATED LATER
-    dontdoanything = ['char_mode', 'slew_time',
-                      'slew_angle', 'slew_dv',
-                      'slew_mass_used', 'FA_fEZ',
-                      'det_DV', 'det_mass_used',
-                      'det_dF_lateral', 'det_dF_axial',
-                      'char_dV', 'char_mass_used',
-                      'char_dF_lateral', 'char_dF_axial', 'sc_mass']
-
-    # list of keys whose array elements need to be repeated based on number of planets
+    # Keys whose array elements need to be repeated based on number of planets
     # detected per star.
-    expand_keys = ['arrival_time', 'star_ind', 'det_time', 'char_time']
+    expand_keys = ['star_name','star_ind','arrival_time','OB_nb',
+                   'det_mode','char_mode', 'det_time','char_time',
+                   'det_fZ', 'char_fZ',
+                   'FA_det_status','FA_char_status','FA_char_SNR','FA_char_fEZ',
+                   'FA_char_dMag','FA_char_WA',
+                   'slew_time','slew_dV','slew_mass_used',
+                   'sc_mass','det_dV','det_mass_used',
+                   'det_dF_lateral','det_dF_axial','char_dV','char_mass_used',
+                   'char_dF_lateral','char_dF_axial']
 
-    # concatenate the arrays of these keys. In the end, each element in these arrays will have their
-    # own individually mapped index in arrays in fill_keys.
-    concatenate_keys = ['plan_inds', 'det_status',
-                        'det_SNR', 'det_fEZ',
-                        'det_dMag', 'det_WA',
-                        'char_status', 'char_SNR',
-                        'char_fEZ', 'char_dMag',
-                        'char_WA', 'FA_status',
-                        'FA_SNR', 'FA_dMag', 'FA_WA']
+
+    # Keys whose arrays need to be concatendated because each is an array
+    # e.g. - plan_inds: [ [0],[0,21,5],...,[51,20] ] <-- where each sub-array
+    # corresponds to n planets around one star.
+    # In the end, each element in these arrays will have their
+    # own individually mapped index in arrays.
+
+    concatenate_keys = ['plan_inds',
+                        'det_status','char_status',
+                        'det_SNR', 'char_SNR']
+
+    # Keys whose arrays will be expanded from 'char_params', and 'det_params'
+    # UPDATE AS NEDED.
+
+    det_expandkeys = ['WA','d','dMag','fEZ','phi']
+    char_expandkeys = ['WA','d','dMag','fEZ','phi']
+    # ========================================================================
 
     # CHECK IF DRM IS EMPTY
     if drm:
+
+        # ====================================================================
         # COLLECT ALL KEYS IN DRM AND UNIQUE-IFY THE ARRAY
         kys = np.array([dt.keys() for dt in drm])
         kys = np.unique(np.concatenate(kys))
+        # ====================================================================
 
-        # CREATE DICTIONARY OF DRM BASED ON KEYWORDS
+        # --------------------------------------------
+        # create dictionary of drm based on keywords
         ddrm = {}
+        # --------------------------------------------
 
+        # ====================================================================
+        #        REARRANGE THE DRM
+        # ----------------------------------------------------
+        # change DRM from array of diciontaries to dictionary
+        # where the values of each key is an array. Each entry
+        # in the arrays represents the meta data for a single planet.
+        # This section will do the above, and replace bad value stuff
+        # with nan's. Keys reported in DRM not in the ICD are not used.
         for ky in kys:
-            # ADD VALUE, UNLESS EMPTY OR KEY DOE
-            ddrm[ky] = np.array([[np.nan] if ky not in dt or
-                                             (not dt[ky] and not isinstance(dt[ky], (int, long, float)))
-                                 else dt.get(ky, [np.nan]) for dt in drm])
+            arr = []
+            for dt in drm:
 
+                if ky not in dt:
+                    arr.append([np.nan])
+                elif isinstance(dt[ky],np.ndarray):
+                    if np.size(dt[ky]) == 0:
+                        arr.append([np.nan])
+                    else: arr.append(dt[ky])
+                elif not isinstance(dt[ky],(int,long,float)) and not dt[ky]:
+                    arr.append([np.nan])
+
+                else:
+                    arr.append(dt.get(ky,[np.nan]))
+
+            ddrm[ky] = np.array(arr)
+        # ====================================================================
+
+        # ====================================================================
+        #  EXPAND ARRAYS TO GET SINGLE PLANET MAPPING
+        # --------------------------------------------------------------------
         plan_raw_inds = ddrm['plan_inds']
 
-        # FILL OUT PROPER ARRAYS
+        # Here, clone the values for each "expand_keys" key to the number of
+        # planets per star.
         for ky in expand_keys:
             try:
                 vals = ddrm[ky]
@@ -327,16 +370,71 @@ def reformat_DRM(drm):
                 ddrm[ky] = np.concatenate(temp_val)
             except KeyError:
                 pass
+        # ====================================================================
 
+        # ====================================================================
+        #  CONCATENATE ARRAYS TO GET SINGLE PLANET MAPPING
+        # --------------------------------------------------------------------
         for ky in concatenate_keys:
             try:
                 ddrm[ky] = np.concatenate(ddrm[ky])
             except KeyError:
                 pass
+        # ====================================================================
+
+        # ====================================================================
+        # UNZIP THE VALUES IN 'det_params" and "char_params" to a one-to-one
+        # mapping with each planet.
+        # remove_astropy strips each value of its astropy quantity... cause why the
+        # hell is that in the output?!!
+
+        if ddrm.has_key('det_params'):
+            det_DRM = list(ddrm['det_params'])
+            det_DRM = remove_astropy(det_DRM)
+
+            for ky in det_expandkeys:
+                arr = np.array([dt['WA'] for dt in det_DRM])
+                arr = np.concatenate(arr)
+                ddrm['det_'+ky] = arr
+            # REMOVE Zipped dicitonary
+            ddrm.pop('det_params');
+
+        if ddrm.has_key('char_params'):
+            char_DRM = list(ddrm['char_params'])
+            char_DRM = remove_astropy(char_DRM)
+
+            for ky in char_expandkeys:
+                arr = np.array([dt['WA'] for dt in char_DRM])
+                arr = np.concatenate(arr)
+                ddrm['char_'+ky] = arr
+            # REMOVE Zipped dicitonary
+            ddrm.pop('char_params');
+
     else:
         ddrm = None
 
     return ddrm
+
+
+def remove_astropy(DRM):
+
+    """
+    Given the DRM from an EXOSIMS simulation, strip the top level
+    astropy quantity to bare numbers, because why the hell is an
+    astropy quant IN THE DAMN OUTPUT?!!
+    """
+
+    kys = np.array([dt.keys() for dt in DRM])
+    kys = np.unique(np.concatenate(kys))
+
+    if DRM:
+        for i in xrange(len(DRM)):
+
+            for ky in kys:
+                if isinstance(DRM[i][ky], astropy.units.quantity.Quantity):
+                    DRM[i][ky] = DRM[i][ky].value
+
+    return DRM
 
 
 def varcsvOut(data):
@@ -433,7 +531,7 @@ def format_args(args):
 #                     FOLDERS
 # ==============================================================================
 #baseFolder = '/var/www/wfirst-dev/html/sims/tools/EXOSIMS-Testing/'
-baseFolder = os.getcwd()
+baseFolder = os.path.join(os.path.expanduser('~'), 'Dropbox','Research','WFIRST','EXOSIMSTesting')
 resultFolder = os.path.join(baseFolder,'SimResults')
 #resultFolder = ''
 scriptFolder = os.path.join(baseFolder, 'scripts')
@@ -443,11 +541,14 @@ scriptFolder = os.path.join(baseFolder, 'scripts')
 # ==============================================================================
 #                 INPUT VARIABLE DICTIONARY
 # ==============================================================================
-args = ['/var/www/wfirst-dev-15-08-07/html/sims/tools/exosimsCGI/bin/EXOSIMS_end2end+outputs.py',
-        '-missionLife', '5.5', '-missionPortion', '0.3', '-extendedLife', '0.0', '-missionStart', '60676.0', '-dMagLim', '19', '-settlingTime', '0.03', '-minComp', '0.02', '-telescopeKeepout', '10.0', '-intCutoff', '30.0', '-eta', '0.1', '-ppFact', '0.3', '-FAP', '0.0000003', '-MDP', '0.001', '-TargetType', 'KeplerLike', '-Dlam', '550.0', '-DBW', '0.1', '-DSNR', '5.0', '-DohTime', '0.1', '-Clam', '600.0', '-CBW', '0.1', '-CSNR', '5.0', '-CohTime', '0.1','-CatType','EXOCAT1']#,'-seed','898150027']
 
+# USE THIS FOR LOCAL TESTING
+args = ['/var/www/wfirst-dev-15-08-07/html/sims/tools/exosimsCGI/bin/EXOSIMS_end2end+outputs.py',
+        '-missionLife', '5.5', '-missionPortion', '0.3', '-extendedLife', '0.0', '-missionStart', '60676.0', '-dMagLim', '20', '-settlingTime', '0.03', '-minComp', '0.1', '-telescopeKeepout', '10.0', '-intCutoff', '50.0', '-eta', '0.1', '-ppFact', '0.3', '-FAP', '0.0000003', '-MDP', '0.001', '-TargetType', 'KnownRV', '-Dlam', '550.0', '-DBW', '0.1', '-DSNR', '5.0', '-DohTime', '0.1', '-Clam', '600.0', '-CBW', '0.1', '-CSNR', '5.0', '-CohTime', '0.1','-CatType','EXOCAT1']#,'-seed','898150027']
 inputVars = format_args(args)
 
+# USE THIS FOR UI
+#args = sys.argv
 #inputVars = format_args(sys.argv)
 
 # ==============================================================================
@@ -523,9 +624,10 @@ except IndexError:
 # Stored detection information -- if any -- in DRM Dictionary
 DRM = sim.SurveySimulation.DRM
 
-# Calculate number of stars observed with one planet.
+# Calculate number of stars observed with one pl
+# anet.
 Nstar_obs_Wplanet = len([DRM[x]['star_ind'] for x in range(len(DRM)) if 1 in DRM[x]['det_status']])
-print 'Number of Stars Observed with at least 1 planet detected: ', Nstar_observed
+print 'Number of Stars Observed with at least 1 planet detected: ', Nstar_obs_Wplanet
 
 # Check to see if any planets/DRM is empty
 if not DRM:
@@ -535,6 +637,7 @@ else: ANYVISITS = True
 # ***************************
 # REFORMATTED DDRM
 if ANYVISITS:
+    DRM = remove_astropy(DRM)
     DDRM = reformat_DRM(DRM)
 # ***************************
 # Simulation specifications ; i.e., all parameters used in simulation
@@ -636,7 +739,7 @@ if ANYVISITS:
     # arrival time array
     arrival_time = DDRM['arrival_time']
 
-    # angular distance of each detection ? mas
+    # angular distance of each detection ? mas\
     det_wa = DDRM['det_WA']
 
     # status of any detections
@@ -663,7 +766,7 @@ stardat = np.array([Name,Spec,parx,
 if ANYVISITS:
     hdr += ',pl_mass,pl_rad,pl_sma,pl_ecc,pl_wangle,pl_albedo,pl_phi,pl_incl,pl_fEZ,pl_dMag,pl_WA'
     planetdat = np.array([Mp.to(con.M_jup).value, Rp.to(con.R_jup).value, sma.value, ecc, wangle.value,
-                          palbedo, SU.phi.value, Iangle.value,fEZ.value,SU.dMag,SU.WA])
+                          palbedo, SU.phi, Iangle.value,fEZ,SU.dMag,SU.WA.value])
     write_array = stardat[:,DDRM['star_ind']]
     write_array = np.vstack((write_array,planetdat[:,DDRM['plan_inds']]))
 
@@ -685,7 +788,7 @@ np.savetxt(csvsavef,write_array.T,fmt='%s',
 
 
 # ===================================================================================================
-#                 HEADER INFORMATION
+#                 HEADER INFORMATION - NEEDS TO BE UPDATED
 # ===================================================================================================
 hdr_info = [('st_name','Star ID'),
 ('st_spt','Stellar Spectral type'),

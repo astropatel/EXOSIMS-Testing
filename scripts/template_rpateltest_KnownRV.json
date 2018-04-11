@@ -1,16 +1,15 @@
 {
   "missionLife": 6,
   "missionPortion": 1.0,
-  "minComp": 0.2,
-  "dMagLim": 19,
-  "dMagint":19,
+  "minComp": 0.02,
+  "dMagLim": 20,
+  "dMagint":  20,
   "pupilDiam": 2.37,
   "obscurFac": 0.1024,
   "settlingTime": 0.02,
   "attenuation": 0.441,
   "ppFact": 0.3,
-  "intCutoff":100,
-  "WA0":0.01,
+  "intCutoff":50,
   "telescopeKeepout":10,
   "logfile":"rpatel_log.txt",
 
@@ -65,7 +64,7 @@
     { "instName": "imager",
       "systName": "HLC-565",
       "detectionMode": true,
-      "lam":550,
+      "lam":600,
       "BW":0.2,
       "SNR":5
     },
@@ -82,7 +81,7 @@
   ],
     "modules": {
     "PlanetPopulation": "KnownRVPlanets",
-    "StarCatalog": "SIMBAD300Catalog",
+    "StarCatalog": "EXOCAT1",
     "OpticalSystem": "Nemati",
     "ZodiacalLight": "Stark",
     "BackgroundSources": "GalaxiesFaintStars",
@@ -91,7 +90,7 @@
     "TimeKeeping": "TimeKeeping",
     "PostProcessing": "PostProcessing",
     "Completeness": "GarrettCompleteness",
-    "TargetList": "TargetList",
+    "TargetList": "KnownRVPlanetsTargetList",
     "SimulatedUniverse": "KnownRVPlanetsUniverse",
     "SurveySimulation": "SurveySimulation",
     "SurveyEnsemble": "SurveyEnsemble"

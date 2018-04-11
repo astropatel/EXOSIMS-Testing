@@ -1,84 +1,81 @@
 {
- "logfile":"logfile.txt",
-  "telescopeKeepout" : 45.0,
-  "intCutoff" :14,
-  "FAP" : 3E-7,
-  "MDP" : 1E-3,
-  "settlingTime" : 0.0,
-  "shapeFac" :0.7854,
-  "eta" : 0.8,
   "missionLife": 6,
-  "missionPortion": 0.6,
-  "minComp": 0.01,
-  "extendedLife" : 0,
-  "dMagLim": 23.0,
+  "missionPortion": 0.1666667,
+  "OBduration": 50,
+  "minComp": 0,
+  "dMagLim": 22.5,
   "pupilDiam": 2.37,
-  "obscurFac": 0.14728,
+  "obscurFac": 0.1024,
   "attenuation": 0.441,
   "ppFact": 0.1,
-
   "scienceInstruments": [
-    {
-      "name": "imaging-EMCCD",
-      "QE": 0.88,
-      "CIC": 0.0013,
-      "sread": 1.7E-6,
-      "idark": 5E-4,
-      "ENF": 1.414,
-      "texp":1000
+    { "name": "imager",
+      "QE": 0.72,
+      "FoV": 9.5,
+      "pixelNumber": 1024,
+      "pixelSize": 1.3e-5,
+      "sread": 1.7e-6,
+      "idark": 3e-5,
+      "CIC": 2.1e-3,
+      "texp": 30,
+      "ENF": 1.41
     },
-    {
-      "name": "spectro-CCD",
-      "QE": 0.88,
-      "CIC": 0.0013,
-      "sread": 3,
-      "Rs": 70
+    { "name": "spectro",
+      "QE": 0.72,
+      "FoV": 1,
+      "pixelNumber": 76,
+      "pixelSize": 1.74e-4,
+      "sread": 1.7e-6,
+      "idark": 3e-5,
+      "CIC": 2.1e-3,
+      "texp": 30,
+      "ENF": 1.41,
+      "Rs": 50
     }
   ],
-
-
   "starlightSuppressionSystems": [
-    {
-      "name": "HLC-565",
+    { "name": "HLC-565",
       "lam": 565,
       "BW": 0.10,
-      "IWA": 0.13,
-      "OWA": 1.44,
-      "occ_trans": 0.2,
+      "IWA": 0.15,
+      "occ_trans": 0.3,
       "core_thruput": 0.02,
-      "core_mean_intensity": 2e-12
+      "core_mean_intensity": 4e-12,
+      "core_area": 0.005,
+      "core_platescale": 0.30
     },
-    {
-      "name": "SPC-800",
+    { "name": "SPC-800",
       "lam": 800,
       "BW": 0.18,
-      "IWA": 0.17,
-      "OWA": 0.64,
+      "IWA": 0.19,
       "occ_trans": 0.3,
-      "core_thruput": 0.04,
+      "core_thruput":0.02,
       "core_mean_intensity": 4e-12,
-      "core_area": 0.005
+      "core_area": 0.005,
+      "core_platescale": 0.30
     }
   ],
-
   "observingModes": [
-    {
-      "instName": "imaging-EMCCD",
+    { "instName": "imager",
       "systName": "HLC-565",
-      "SNR":5,
-      "lam": 565,
-      "BW": 0.10,
-      "detection":true
+      "detectionMode": true
     },
-
-    {
-      "instName": "spectro-CCD",
+    { "instName": "imager",
+      "systName": "HLC-565",
+      "lam": 660,
+      "BW": 0.18
+    },
+    { "instName": "spectro",
       "systName": "SPC-800",
-      "lam": 400,
-      "BW": 0.10,
-      "SNR":5
-    }],
-
+      "lam": 660,
+      "SNR": 10
+    },
+    { "instName": "spectro",
+      "systName": "SPC-800",
+      "lam": 770,
+      "SNR": 10
+    }
+  ],
   "modules": {
     "PlanetPopulation": "KnownRVPlanets",
     "StarCatalog": " ",

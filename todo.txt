@@ -1,2 +1,22 @@
 To do:
 
+Look into adding the following parameters:
+
+- minComp
+- OBduration
+- WA0
+- WAint
+- nVisitsMax
+- ntFlux
+- dMagLim
+- dMag0
+
+See if following options are needed in script: 
+
+sim.reset_sim
+
+Check to see if DRM2Array works -
+
+Note: The error on line 392 does not produce any useful message. IT doesn't tell you which key is not used.
+
+Update DRM keys in reformat_DRM to those in v1.34 - DONE
