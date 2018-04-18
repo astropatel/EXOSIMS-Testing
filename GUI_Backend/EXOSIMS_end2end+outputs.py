@@ -6,19 +6,17 @@ print 'the sequence of observations.'
 print 'Most error messages are harmless'
 print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'
 
-
-
 # ===================================================================================================
 #                            IMPORT STATEMENTS
 # ===================================================================================================
 
 
-import sys, warnings,collections
+import sys, warnings, collections
 from astropy.utils.exceptions import AstropyWarning
 
 sys.path.insert(0, '/var/www/wfirst-dev/html/sims/tools/EXOSIMS')
-#print(sys.path)
-#print 'in Python: sys.argv= ', sys.argv
+# print(sys.path)
+# print 'in Python: sys.argv= ', sys.argv
 
 import numpy as np
 import json, os, csv, string
@@ -27,11 +25,13 @@ import EXOSIMS.MissionSim as msim
 from astropy import constants as con
 import astropy
 import matplotlib
+
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 from mpl_toolkits.axes_grid1 import make_axes_locatable
-#import mosaic_tools as mt
+
+# import mosaic_tools as mt
 
 # ===================================================================================================
 #                  IGNORE ALL ASTROPY WARNINGS.
@@ -39,6 +39,7 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 warnings.simplefilter('ignore', category=AstropyWarning)
 warnings.filterwarnings("ignore")
+
 
 # ===================================================================================================
 #                      PLOTTING DEFINITIONS
@@ -163,7 +164,6 @@ def linePlot(xdat, ydat, ax0=None, labels=('x', 'y'), xlog=False, ylog=False, **
     except:
         pass
 
-
     ax.plot(xdat, ydat, **kw)
     ax.set_xlabel(r'%s' % labels[0], fontsize=20)
     ax.set_ylabel(r'%s' % labels[1], fontsize=20)
@@ -241,9 +241,9 @@ def histPlot(xdat, bins=15, ax0=None, labels=('x', 'y'), xlog=False, ylog=False,
 
     return ax
 
-def skyplot(ra, dec, figsize=(20, 20), projection='mollweide', axisbg='white',
-                ticklcolor=None, ticklabels=None):
 
+def skyplot(ra, dec, figsize=(20, 20), projection='mollweide', axisbg='white',
+            ticklcolor=None, ticklabels=None):
     fig = plt.figure(figsize=figsize)
     ax = fig.add_subplot(111, projection=projection, facecolor=axisbg)
 
@@ -279,20 +279,19 @@ def reformat_DRM(drm):
     # WHAT KEYS WILL BE ORGANIZED HOW - UPDATED AS NEEDED
     # ------------------------------------------------------------------------
     # Don't do anything with these initially- these are dictionaries in the DRM.
-    dontdoanything =['det_params','char_params']
+    dontdoanything = ['det_params', 'char_params']
 
     # Keys whose array elements need to be repeated based on number of planets
     # detected per star.
-    expand_keys = ['star_name','star_ind','arrival_time','OB_nb',
-                   'det_mode','char_mode', 'det_time','char_time',
+    expand_keys = ['star_name', 'star_ind', 'arrival_time', 'OB_nb',
+                   'det_mode', 'char_mode', 'det_time', 'char_time',
                    'det_fZ', 'char_fZ',
-                   'FA_det_status','FA_char_status','FA_char_SNR','FA_char_fEZ',
-                   'FA_char_dMag','FA_char_WA',
-                   'slew_time','slew_dV','slew_mass_used',
-                   'sc_mass','det_dV','det_mass_used',
-                   'det_dF_lateral','det_dF_axial','char_dV','char_mass_used',
-                   'char_dF_lateral','char_dF_axial']
-
+                   'FA_det_status', 'FA_char_status', 'FA_char_SNR', 'FA_char_fEZ',
+                   'FA_char_dMag', 'FA_char_WA',
+                   'slew_time', 'slew_dV', 'slew_mass_used',
+                   'sc_mass', 'det_dV', 'det_mass_used',
+                   'det_dF_lateral', 'det_dF_axial', 'char_dV', 'char_mass_used',
+                   'char_dF_lateral', 'char_dF_axial']
 
     # Keys whose arrays need to be concatendated because each is an array
     # e.g. - plan_inds: [ [0],[0,21,5],...,[51,20] ] <-- where each sub-array
@@ -301,14 +300,14 @@ def reformat_DRM(drm):
     # own individually mapped index in arrays.
 
     concatenate_keys = ['plan_inds',
-                        'det_status','char_status',
+                        'det_status', 'char_status',
                         'det_SNR', 'char_SNR']
 
     # Keys whose arrays will be expanded from 'char_params', and 'det_params'
     # UPDATE AS NEDED.
 
-    det_expandkeys = ['WA','d','dMag','fEZ','phi']
-    char_expandkeys = ['WA','d','dMag','fEZ','phi']
+    det_expandkeys = ['WA', 'd', 'dMag', 'fEZ', 'phi']
+    char_expandkeys = ['WA', 'd', 'dMag', 'fEZ', 'phi']
     # ========================================================================
 
     # CHECK IF DRM IS EMPTY
@@ -339,15 +338,16 @@ def reformat_DRM(drm):
 
                 if ky not in dt:
                     arr.append([np.nan])
-                elif isinstance(dt[ky],np.ndarray):
+                elif isinstance(dt[ky], np.ndarray):
                     if np.size(dt[ky]) == 0:
                         arr.append([np.nan])
-                    else: arr.append(dt[ky])
-                elif not isinstance(dt[ky],(int,long,float)) and not dt[ky]:
+                    else:
+                        arr.append(dt[ky])
+                elif not isinstance(dt[ky], (int, long, float)) and not dt[ky]:
                     arr.append([np.nan])
 
                 else:
-                    arr.append(dt.get(ky,[np.nan]))
+                    arr.append(dt.get(ky, [np.nan]))
 
             ddrm[ky] = np.array(arr)
         # ====================================================================
@@ -395,7 +395,7 @@ def reformat_DRM(drm):
             for ky in det_expandkeys:
                 arr = np.array([dt['WA'] for dt in det_DRM])
                 arr = np.concatenate(arr)
-                ddrm['det_'+ky] = arr
+                ddrm['det_' + ky] = arr
             # REMOVE Zipped dicitonary
             ddrm.pop('det_params');
 
@@ -406,7 +406,7 @@ def reformat_DRM(drm):
             for ky in char_expandkeys:
                 arr = np.array([dt['WA'] for dt in char_DRM])
                 arr = np.concatenate(arr)
-                ddrm['char_'+ky] = arr
+                ddrm['char_' + ky] = arr
             # REMOVE Zipped dicitonary
             ddrm.pop('char_params');
 
@@ -417,7 +417,6 @@ def reformat_DRM(drm):
 
 
 def remove_astropy(DRM):
-
     """
     Given the DRM from an EXOSIMS simulation, strip the top level
     astropy quantity to bare numbers, because why the hell is an
@@ -521,8 +520,6 @@ def format_args(args):
     return invar3
 
 
-
-
 # ================================================================================
 
 # PT = mt.PlottingTools() RP -- DON'T NEED THIS ANYMORE.
@@ -530,12 +527,12 @@ def format_args(args):
 # ==============================================================================
 #                     FOLDERS
 # ==============================================================================
-#baseFolder = '/var/www/wfirst-dev/html/sims/tools/EXOSIMS-Testing/'
-baseFolder = os.path.join(os.path.expanduser('~'), 'Dropbox','Research','WFIRST','EXOSIMSTesting')
-resultFolder = os.path.join(baseFolder,'SimResults')
-#resultFolder = ''
+# baseFolder = '/var/www/wfirst-dev/html/sims/tools/EXOSIMS-Testing/'
+baseFolder = os.path.join(os.path.expanduser('~'), 'Dropbox', 'Research', 'WFIRST', 'EXOSIMSTesting')
+resultFolder = os.path.join(baseFolder, 'SimResults')
+# resultFolder = ''
 scriptFolder = os.path.join(baseFolder, 'scripts')
-#JX compFolder = os.path.join(baseFolder, 'Completeness')
+# JX compFolder = os.path.join(baseFolder, 'Completeness')
 # ==============================================================================
 
 # ==============================================================================
@@ -544,12 +541,16 @@ scriptFolder = os.path.join(baseFolder, 'scripts')
 
 # USE THIS FOR LOCAL TESTING
 args = ['/var/www/wfirst-dev-15-08-07/html/sims/tools/exosimsCGI/bin/EXOSIMS_end2end+outputs.py',
-        '-missionLife', '5.5', '-missionPortion', '0.3', '-extendedLife', '0.0', '-missionStart', '60676.0', '-dMagLim', '20', '-settlingTime', '0.03', '-minComp', '0.1', '-telescopeKeepout', '10.0', '-intCutoff', '50.0', '-eta', '0.1', '-ppFact', '0.3', '-FAP', '0.0000003', '-MDP', '0.001', '-TargetType', 'KnownRV', '-Dlam', '550.0', '-DBW', '0.1', '-DSNR', '5.0', '-DohTime', '0.1', '-Clam', '600.0', '-CBW', '0.1', '-CSNR', '5.0', '-CohTime', '0.1','-CatType','EXOCAT1']#,'-seed','898150027']
+        '-missionLife', '5.5', '-missionPortion', '0.3', '-extendedLife', '0.0', '-missionStart', '60676.0', '-dMagLim',
+        '20', '-settlingTime', '0.03', '-minComp', '0.1', '-telescopeKeepout', '10.0', '-intCutoff', '50.0', '-eta',
+        '0.1', '-ppFact', '0.3', '-FAP', '0.0000003', '-MDP', '0.001', '-TargetType', 'KnownRV', '-Dlam', '550.0',
+        '-DBW', '0.1', '-DSNR', '5.0', '-DohTime', '0.1', '-Clam', '600.0', '-CBW', '0.1', '-CSNR', '5.0', '-CohTime',
+        '0.1', '-CatType', 'EXOCAT1']  # ,'-seed','898150027']
 inputVars = format_args(args)
 
 # USE THIS FOR UI
-#args = sys.argv
-#inputVars = format_args(sys.argv)
+# args = sys.argv
+# inputVars = format_args(sys.argv)
 
 # ==============================================================================
 #                   JSON INPUTS
@@ -583,32 +584,31 @@ for ikey, ivar in inputVars.iteritems():
         if ikey == 'seed':
             useSpecs[ikey] = int(ivar)
     except ValueError:
-        pass #print '%s=%s cant be converted to float' % (ikey, ivar)
-    # if ikey in useSpecs:
-    #     try:
-    #         useSpecs[ikey] = float(ivar)
-    #     except ValueError:
-    #         pass #print '%s=%s cant be converted to float' % (ikey, ivar)
+        pass  # print '%s=%s cant be converted to float' % (ikey, ivar)
+        # if ikey in useSpecs:
+        #     try:
+        #         useSpecs[ikey] = float(ivar)
+        #     except ValueError:
+        #         pass #print '%s=%s cant be converted to float' % (ikey, ivar)
 # REPLACE INPUT OF BAND INFO AND CREATE OBSERVING MODE ARRAY
 for okey in osmodekeys:
     try:
         obsSpecs['HLC_Detection'][okey] = float(inputVars['D' + okey])
     except ValueError:
-        pass #print '%s=%s cant be converted to float' % (okey, inputVars['D' + okey])
+        pass  # print '%s=%s cant be converted to float' % (okey, inputVars['D' + okey])
     try:
         obsSpecs['SPC_Characterization'][okey] = float(inputVars['C' + okey])
     except ValueError:
-        pass #print '%s=%s cant be converted to float' % (okey, inputVars['D' + okey])
+        pass  # print '%s=%s cant be converted to float' % (okey, inputVars['D' + okey])
 
 # CREATES LIST OF 2 OBSERVING MODES
 useSpecs['observingModes'] = [obsSpecs['HLC_Detection'],
-                             obsSpecs['SPC_Characterization']]
+                              obsSpecs['SPC_Characterization']]
 
 useSpecs['modules'] = modSpecs[inputVars['TargetType']]
 
 if inputVars['TargetType'] is not 'KnownRV':
     useSpecs['modules']['StarCatalog'] = inputVars['CatType']
-
 
 # ===================================================================================================
 #                            RUN SIMULATION
@@ -632,7 +632,8 @@ print 'Number of Stars Observed with at least 1 planet detected: ', Nstar_obs_Wp
 # Check to see if any planets/DRM is empty
 if not DRM:
     ANYVISITS = False
-else: ANYVISITS = True
+else:
+    ANYVISITS = True
 
 # ***************************
 # REFORMATTED DDRM
@@ -700,7 +701,6 @@ try:
 except AttributeError:
     pass
 
-
 try:
     nPlans, plan2star = SU.nPlans, SU.plan2star
     sInds = SU.sInds
@@ -718,10 +718,8 @@ try:
 except AttributeError:
     pass
 
-
 Mprange = AllSpecs['Mprange']
 arange = AllSpecs['arange']
-
 
 # CHECK IF DDRM IS EMTPY = NO PLANETS DETECTED.
 if ANYVISITS:
@@ -734,7 +732,7 @@ if ANYVISITS:
     # detind_pl = np.concatenate(detind_pl).astype('int32')
     except:
         NOPLANETS = True
-        pass #print 'No planets detected?'
+        pass  # print 'No planets detected?'
 
     # arrival time array
     arrival_time = DDRM['arrival_time']
@@ -749,8 +747,7 @@ if ANYVISITS:
     target_observed = Name[target_obsind]
     detstatus_array = np.array([dt['det_status'] for dt in DRM])
 else:
-    pass #print 'No Planets detected.'
-
+    pass  # print 'No Planets detected.'
 
 # =========================================================================================
 #             OUTPUT CSV FILES
@@ -759,93 +756,98 @@ leftover, slist, sdict = varcsvOut2(AllSpecs)
 comments = [string.join(sdict), string.join(slist), string.join(leftover)]
 comments = string.join(comments)
 hdr = 'st_name,st_spt,st_parallax,st_Umag,st_Bmag,st_Vmag,st_Rmag,st_Imag,st_Jmag,st_Hmag,st_Kmag,st_distance,st_B-V,st_M_v,st_BC,st_Lum'
-stardat = np.array([Name,Spec,parx,
-                    Umag,Bmag, Vmag, Rmag, Imag, Jmag, Hmag, Kmag,
-                    dist,BV,MV, BC,L])
+stardat = np.array([Name, Spec, parx,
+                    Umag, Bmag, Vmag, Rmag, Imag, Jmag, Hmag, Kmag,
+                    dist, BV, MV, BC, L])
 
 if ANYVISITS:
     hdr += ',pl_mass,pl_rad,pl_sma,pl_ecc,pl_wangle,pl_albedo,pl_phi,pl_incl,pl_fEZ,pl_dMag,pl_WA'
     planetdat = np.array([Mp.to(con.M_jup).value, Rp.to(con.R_jup).value, sma.value, ecc, wangle.value,
-                          palbedo, SU.phi, Iangle.value,fEZ,SU.dMag,SU.WA.value])
-    write_array = stardat[:,DDRM['star_ind']]
-    write_array = np.vstack((write_array,planetdat[:,DDRM['plan_inds']]))
-
+                          palbedo, SU.phi, Iangle.value, fEZ, SU.dMag, SU.WA.value])
+    write_array = stardat[:, DDRM['star_ind']]
+    write_array = np.vstack((write_array, planetdat[:, DDRM['plan_inds']]))
 
     for key, val in DDRM.iteritems():
-        if key not in ['plan_inds','star_ind','char_mode']:
+        if key not in ['plan_inds', 'star_ind', 'char_mode']:
             hdr += ',{}'.format(key)
             dat = DDRM[key]
-            write_array = np.vstack((write_array,dat))
+            write_array = np.vstack((write_array, dat))
 
 else:
     write_array = stardat
 
-csvsavef = os.path.join(resultFolder,'simResults.csv')
+csvsavef = os.path.join(resultFolder, 'simResults.csv')
 
-np.savetxt(csvsavef,write_array.T,fmt='%s',
-           header=hdr,delimiter=',',comments=comments)
+np.savetxt(csvsavef, write_array.T, fmt='%s',
+           header=hdr, delimiter=',', comments=comments)
 # ===================================================================================================
 
 
 # ===================================================================================================
 #                 HEADER INFORMATION - NEEDS TO BE UPDATED
 # ===================================================================================================
-hdr_info = [('st_name','Star ID'),
-('st_spt','Stellar Spectral type'),
-('st_parallax','Stellar parallax (mas)'),
-('st_Umag', 'Stellar U mag (mag)'),
-('st_Bmag', 'Stellar B mag (mag)'),
-('st_Vmag', 'Stellar V mag (mag)'),
-('st_Rmag', 'Stellar R mag (mag)'),
-('st_Imag', 'Stellar I mag (mag)'),
-('st_Jmag', 'Stellar J mag (mag)'),
-('st_Hmag', 'Stellar H mag (mag)'),
-('st_Kmag' , 'Stellar K mag (mag)'),
-('st_distance', 'Stellar Distance (pc)'),
-('st_B-V', 'Stellar B-V color (mag)'),
-('st_M_v', 'Stellar absolute V mag (mag)'),
-('st_BC' , 'Stellar bolometric correction'),
-('pl_mass', 'Planet mass (M_jupiter)'),
-('pl_rad', 'Planet radius (R_jupiter)'),
-('pl_sma', 'Planet semi-major axis (AU)'),
-('pl_ecc', 'Planet eccentricity'),
-('pl_wangle', 'Planet star-separation [working angle] (arcsec)'),
-('pl_albedo' , 'Planet albedo'),
-('pl_phi' , 'Planet phase angle'),
-('pl_incl', 'Planet inclination'),
-('pl_fEZ', 'Surface brightness o fexozodicacal light (1/arcsec^2)'),
-('pl_dMag', 'planet to star magnitude difference (mag)'),
-('pl_WA', 'planet working angle at detection (mas)'),
-('char_status', ' characterization status for each planet orbiting the observed target star where 1 is full spectrum -1 partial spectrum and 0 not characterized'),
-('det_WA', ' working angles at detection in units of mas for each planet orbiting the observed target star'),
-('char_time', 'Integration time for characterization in units of day'),
-('char_fEZ' , ' exo-zodi surface brightnesses at characterization in units of 1/arcsec2 for each planet orbiting the observed target star'),
-('det_fEZ', 'exo-zodi surface brightnesses at detection in units of 1/arcsec2 for each planet orbiting the observed target star.'),
-('det_time','Integration time for detection in units of day'),
-('arrival_time','Elapsed time since mission start when observation begins in units of day'),
-('det_status',' detection status for each planet orbiting the observed target star where 1 is detection 0 missed detection -1 below IWA and -2 beyond OWA'),
-('char_dMag',' delta magnitudes at characterization for each planet orbiting the observed target star'),
-('det_SNR', ' detection SNR values for each planet orbiting the observed target star. Non-observable planets have their SNR set to 0.'),
-('char_SNR','characterization SNR values for each planet orbiting the observed target star. Non-observable planets have their SNR set to 0.'),
-('char_WA','working angles at characterization in units of mas for each planet orbiting the observed target star'),
-('det_dMag',' delta magnitudes at detection for each planet orbiting the observed target star')]
+hdr_info = [('st_name', 'Star ID'),
+            ('st_spt', 'Stellar Spectral type'),
+            ('st_parallax', 'Stellar parallax (mas)'),
+            ('st_Umag', 'Stellar U mag (mag)'),
+            ('st_Bmag', 'Stellar B mag (mag)'),
+            ('st_Vmag', 'Stellar V mag (mag)'),
+            ('st_Rmag', 'Stellar R mag (mag)'),
+            ('st_Imag', 'Stellar I mag (mag)'),
+            ('st_Jmag', 'Stellar J mag (mag)'),
+            ('st_Hmag', 'Stellar H mag (mag)'),
+            ('st_Kmag', 'Stellar K mag (mag)'),
+            ('st_distance', 'Stellar Distance (pc)'),
+            ('st_B-V', 'Stellar B-V color (mag)'),
+            ('st_M_v', 'Stellar absolute V mag (mag)'),
+            ('st_BC', 'Stellar bolometric correction'),
+            ('pl_mass', 'Planet mass (M_jupiter)'),
+            ('pl_rad', 'Planet radius (R_jupiter)'),
+            ('pl_sma', 'Planet semi-major axis (AU)'),
+            ('pl_ecc', 'Planet eccentricity'),
+            ('pl_wangle', 'Planet star-separation [working angle] (arcsec)'),
+            ('pl_albedo', 'Planet albedo'),
+            ('pl_phi', 'Planet phase angle'),
+            ('pl_incl', 'Planet inclination'),
+            ('pl_fEZ', 'Surface brightness o fexozodicacal light (1/arcsec^2)'),
+            ('pl_dMag', 'planet to star magnitude difference (mag)'),
+            ('pl_WA', 'planet working angle at detection (mas)'),
+            ('char_status',
+             ' characterization status for each planet orbiting the observed target star where 1 is full spectrum -1 partial spectrum and 0 not characterized'),
+            (
+            'det_WA', ' working angles at detection in units of mas for each planet orbiting the observed target star'),
+            ('char_time', 'Integration time for characterization in units of day'),
+            ('char_fEZ',
+             ' exo-zodi surface brightnesses at characterization in units of 1/arcsec2 for each planet orbiting the observed target star'),
+            ('det_fEZ',
+             'exo-zodi surface brightnesses at detection in units of 1/arcsec2 for each planet orbiting the observed target star.'),
+            ('det_time', 'Integration time for detection in units of day'),
+            ('arrival_time', 'Elapsed time since mission start when observation begins in units of day'),
+            ('det_status',
+             ' detection status for each planet orbiting the observed target star where 1 is detection 0 missed detection -1 below IWA and -2 beyond OWA'),
+            ('char_dMag', ' delta magnitudes at characterization for each planet orbiting the observed target star'),
+            ('det_SNR',
+             ' detection SNR values for each planet orbiting the observed target star. Non-observable planets have their SNR set to 0.'),
+            ('char_SNR',
+             'characterization SNR values for each planet orbiting the observed target star. Non-observable planets have their SNR set to 0.'),
+            ('char_WA',
+             'working angles at characterization in units of mas for each planet orbiting the observed target star'),
+            ('det_dMag', ' delta magnitudes at detection for each planet orbiting the observed target star')]
 
 hdr_info2 = collections.OrderedDict(hdr_info)
 
-hdrinfo_file = os.path.join(resultFolder,'headerinfo.csv')
+hdrinfo_file = os.path.join(resultFolder, 'headerinfo.csv')
 
-f = open(hdrinfo_file,'w')
+f = open(hdrinfo_file, 'w')
 f.write('header,description\n')
-for key,val in hdr_info2.iteritems():
-    f.write('{},{}\n'.format(key,val))
+for key, val in hdr_info2.iteritems():
+    f.write('{},{}\n'.format(key, val))
 f.close()
-
 
 # ===================================================================================================
 #                 PLOTS
 # ===================================================================================================
 save_plots = True
-
 
 # Set up Data
 dirsave = ''
@@ -871,12 +873,11 @@ massbins = np.linspace(.001, 50, 20)
 # ===================================================================================================
 
 
-#if FOUND_PLANETS:
-    # SKY DISTRIBUTION OF TARGETS
+# if FOUND_PLANETS:
+# SKY DISTRIBUTION OF TARGETS
 plot_num = 1  # RP : PLOT NUMBER
 
-
-axt = skyplot(ra_rad, dec_rad, axisbg='#E8E8E8',ticklabels=tick_labels)
+axt = skyplot(ra_rad, dec_rad, axisbg='#E8E8E8', ticklabels=tick_labels)
 
 plt.show()
 try:
@@ -902,7 +903,7 @@ if save_plots:
 # ================================================================================
 #        OBSERVATION ORDER LINES
 # ================================================================================
-axt3 = skyplot(ra_rad, dec_rad, axisbg='#E8E8E8',ticklabels=tick_labels)
+axt3 = skyplot(ra_rad, dec_rad, axisbg='#E8E8E8', ticklabels=tick_labels)
 try:
     plot_setup(axt3)
 except:
@@ -923,7 +924,8 @@ if ANYVISITS:
         if i == 0:
             axt3.plot(ra_rad[j], dec_rad[j], 'm*', ms=20, mec='none')
 
-else: axt3.text(-2, 3, r'NO SYSTEMS WERE OBSERVED', fontsize=30)
+else:
+    axt3.text(-2, 3, r'NO SYSTEMS WERE OBSERVED', fontsize=30)
 
 axt3.xaxis.label.set_color('lightgray')
 axt3.tick_params(axis='both', colors='lightgray')
@@ -945,9 +947,9 @@ if save_plots:
 kw = {'markersize': 15, 'color': '#00cc00', 'marker': 'o', 'alpha': .6, 'mec': 'none'}
 axbv = scatterPlot(BV, MV, figsize=(15, 15), **kw)
 if ANYVISITS:
-    axbv.plot(BV[target_obsind], MV[target_obsind], 'ms', markersize=16, mec='m', mew=3, alpha=0.7,mfc='none')
-else: 
-    axbv.text(np.average(BV),np.average(MV),'NO SYSTEMS WERE OBSERVED',fontsize=30)
+    axbv.plot(BV[target_obsind], MV[target_obsind], 'ms', markersize=16, mec='m', mew=3, alpha=0.7, mfc='none')
+else:
+    axbv.text(np.average(BV), np.average(MV), 'NO SYSTEMS WERE OBSERVED', fontsize=30)
 axbv.set_ylim(axbv.get_ylim()[::-1])
 axbv.set_xlabel(r'B-V [mag]', fontsize=35)
 axbv.set_ylabel(r'$M_V$ [mag]', fontsize=35)
@@ -983,13 +985,10 @@ if ANYVISITS:
 
 
 else:
-    axcc = plt.figure(figsize=(15,15)).add_subplot(111)
-    axcc.text(0.1,0.5,'NO SYSTEMS WERE OBSERVED',fontsize=30)
+    axcc = plt.figure(figsize=(15, 15)).add_subplot(111)
+    axcc.text(0.1, 0.5, 'NO SYSTEMS WERE OBSERVED', fontsize=30)
 axcc.set_ylabel(r'Planet-Star Flux Ratio', fontsize=35)
 axcc.set_xlabel(r'Working Angle (mas)', fontsize=35)
-
-
-
 
 txt = """CONTRAST VS. WORKING ANGLE OF DETECTED PLANETS.\n IWA=0.0 mas, OWA=inf"""
 axcc.set_title('%s' % txt, fontsize=30, y=1.03)
@@ -1000,7 +999,8 @@ if save_plots:
     plt.savefig(os.path.join(dirsave, 'fig%i.pdf' % plot_num), bbox_inches='tight', edgecolor='none')
     plot_num += 1
 
-else: print 'No planets detected, so no plots were produced. Check input parameters.'
+else:
+    print 'No planets detected, so no plots were produced. Check input parameters.'
 
 print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 print 'Simulation Complete.'
